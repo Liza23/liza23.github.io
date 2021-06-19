@@ -17,7 +17,7 @@ html {
 .purple {
   /* color: var(--imp-text-color) !important; */
   /* color: #CB8589 !important; */
-  color: #DF5676 !important;
+  color: #218B82 !important;
   font-weight: bold;
 }
 
@@ -76,7 +76,7 @@ html {
 /* --------- */
 .sticky {
   /* background-color: #C9A4A0 !important; */
-  background-color: #218B82 !important;
+  background-color: #f4c2c2 !important;
   color: #3B3638 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
@@ -88,6 +88,7 @@ html {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
+  background-color: #f4c2c2 !important;
   color: #3B3638 !important;
 }
 
@@ -292,7 +293,7 @@ html {
 .Typewriter__wrapper {
   font-size: 2.2em !important;
   /* color: #CB8589 !important; */
-  color: #EB96AA !important;
+  color: #218B82 !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
@@ -422,7 +423,7 @@ html {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: #218B82;
+  background-color: #f4c2c2 !important;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -483,14 +484,16 @@ html {
 
 .project-card-view {
   /* box-shadow: 0 4px 5px 3px rgb(154, 217, 219	) !important; */
-  border-width: 4px !important; 
-  border-color: #EB96AA	!important ;
+  /* border-width: 4px !important; 
+  border-color: #EB96AA	!important ; */
   color: #3B3638 !important;
   /* color: white !important; */
   /* background-color: #A15D98 !important; */
-  background-color: rgb(235, 150, 170, 0.5) !important;
+  /* background-color: rgb(235, 150, 170, 0.5) !important; */
+  /* background-color: #8FDDE7 !important; */
   /* background-color: rgb(152,212,187) !important; */
   /* opacity: 0.9 !important; */
+  background-color: #f4c2c2 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
@@ -548,16 +551,15 @@ html {
 }
 
 .btn-primary {
-  color: #3B3638 !important;
-  /* background-color: #4382BB !important; */
-  background-color: #98D4BB !important;
-  border-color: #98D4BB !important;
+  color: white !important;
+  background-color: #218B82 !important;
+  border-color: #218B82 !important;
 }
 
 .btn-primary:hover {
-  color: #3B3638 !important;
-  background-color: rgb(152,212,187, 0.5) !important;
-  border-color: #98D4BB !important;
+  color: white !important;
+  background-color: #218B82 !important;
+  border-color: #218B82 !important;
 }
 .btn:focus {
   outline: none !important;
@@ -565,6 +567,8 @@ html {
 }
 .project-heading {
   /* color: white !important; */
+  color: #f4c2c2 !important;
+
   color: #3B3638 !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
@@ -764,12 +768,14 @@ html {
 .fork-btn {
   font-size: 1.1em !important;
   padding-top: 10px !important;
+  color: white !important;
 }
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #EB96AA !important;
-  border-color: #EB96AA !important;
+  background-color: #218B82 !important;
+  border-color: #218B82 !important;
+  color: white !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
