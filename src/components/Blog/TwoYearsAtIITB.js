@@ -8,7 +8,6 @@ import IITB2 from "../../Assets/Blogs/IITB-2.jpg";
 import IITB3 from "../../Assets/Blogs/IITB-3.jpg";
 import IITB4 from "../../Assets/Blogs/IITB-4.jpg";
 import TathuImg from "../../Assets/Blogs/IITB-Tathu-Liza.jpg";
-import IITB9 from "../../Assets/Blogs/IITB-9.jpg";
 import IITB12 from "../../Assets/Blogs/IITB-12.jpg";
 import IITB13 from "../../Assets/Blogs/IITB-13.jpg";
 import IITB14 from "../../Assets/Blogs/IITB-14.jpg";

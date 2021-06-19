@@ -1,12 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import BlogCard from "./BlogsCards";
 import Particle from "../Particle";
 
-import algo from "../../Assets/Projects/algo.png";
 import imageInpaint from "../../Assets/Projects/imageInpaint.png";
-import plant from "../../Assets/Projects/plant.jpeg";
 import starHopping from "../../Assets/Projects/starHopping.png";
 import sentiments from "../../Assets/Projects/sentiments.jpg";
 import gan from "../../Assets/Projects/gan.jpg";

@@ -1,10 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import Resumecontent from "./ResumeContent";
-import axios from "axios";
-import { AiOutlineDownload } from "react-icons/ai";
 
 function Experience() {
   return (
