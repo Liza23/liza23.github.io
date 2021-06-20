@@ -317,12 +317,12 @@ html {
   padding-top: 9em !important;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .myAvtar {
     padding-top: 2em !important;
     padding-bottom: 2em !important;
   }
-}
+} */
 
 .home-about-section {
   position: relative;
@@ -423,7 +423,7 @@ html {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: #f4c2c2 !important;
+  background-color: #f0acac !important;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -459,7 +459,7 @@ html {
 }
 
 .blockquote-footer {
-  color: #f4c2c2 !important;
+  color: #f0acac !important;
 }
 /* --------- */
 /* Projects */
@@ -511,7 +511,7 @@ html {
 
 .blog-card {
   padding-top: 50px !important;
-  padding-bottom: 50px !important;
+  padding-bottom: 190px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
@@ -538,9 +538,9 @@ html {
 }
 
 .blog-card-view:hover {
-  transform: scale(1.02) !important;
+  transform: scale(1.01) !important;
   overflow: hidden !important;
-  box-shadow: 0 2px 2px 2px #218B82 !important;
+  box-shadow: 0px 1px 1px 1px #218B82 !important;
 }
 
 .card-img-top {

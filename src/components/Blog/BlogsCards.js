@@ -3,15 +3,13 @@ import Card from "react-bootstrap/Card";
 
 function BlogsCards(props) {
   return (
-    <a
-      className="blog-link"
-      href={props.link}
-      // target="_blank"
-      //   rel="noreferrer"
-      //   style={{ fontSize: "1.2em" }}
-    >
+    <a className="blog-link" href={props.link}>
       <Card className="blog-card-view">
-        <Card.Title>
+        <Card.Title
+          style={{
+            fontWeight: "600",
+          }}
+        >
           {props.title}
         </Card.Title>
         <Card.Img variant="bottom" src={props.imgPath} className="blog-img" />

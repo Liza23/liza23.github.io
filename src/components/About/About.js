@@ -24,17 +24,10 @@ function About() {
             </h1>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            // style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
+          <Col md={5} className="about-img">
             <Row
-              // md={5}
-
               style={{
                 justifyContent: "center",
-
                 paddingTop: "120px",
               }}
               className="about-img"
@@ -47,24 +40,22 @@ function About() {
             <Row></Row>
 
             <Row
-              // md={5}
               style={{
                 justifyContent: "center",
-
                 paddingTop: "260px",
               }}
               className="about-img"
             >
-              <img src={selfImg2} alt="about" className="img-fluid" />
+              <img
+                src={selfImg2}
+                alt="about"
+                style={{
+                  borderRadius: 10,
+                }}
+                className="img-fluid"
+              />
               Different outfits same pose:)
             </Row>
-            {/* <Col
-              md={5}
-              style={{ paddingTop: "120px", paddingBottom: "50px" }}
-              className="about-img"
-            >
-              <img src={selfImg2} alt="about" className="img-fluid" />
-            </Col> */}
           </Col>
         </Row>
       </Container>
