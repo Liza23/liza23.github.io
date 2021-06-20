@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
+    <HashRouter basename="/liza23.github.io">
       <App />
     </HashRouter>
   </React.StrictMode>,
