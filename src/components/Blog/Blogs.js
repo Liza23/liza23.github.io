@@ -16,7 +16,7 @@ function Blogs() {
           <Col md={4} className="blog-card">
             <BlogCard
               imgPath={IITBCover}
-              link="/liza23.github.io/my-2-years-at-IITB"
+              link="/blogs/my-2-years-at-IITB"
               title="My 2 Years at IIT Bombay"
               content="Using some 1000ish words, I tried to recapitulate my experience at IIT Bombay for the 0.75 + 1.25 i years that I've spent here till now."
             />
