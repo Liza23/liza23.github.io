@@ -35,7 +35,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/experience" component={Experience} />
           <Route path="/blogs" component={Blogs} />
-          <Route path="/blogs/my-2-years-at-IITB" component={TwoYearsAtIITB}/>
+          <Route path="/my-2-years-at-IITB" component={TwoYearsAtIITB}/>
         </Switch>
         <Footer />
       </div>
