@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Blogs from "./components/Blog/Blogs";
 import TwoYearsAtIITB from "./components/Blog/TwoYearsAtIITB";
 import Experience from "./components/Experience/Experience";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -30,21 +30,12 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Switch>
-          <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
-          <Route
-            path={process.env.PUBLIC_URL + "/project"}
-            component={Projects}
-          />
-          <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
-          <Route
-            path={process.env.PUBLIC_URL + "/experience"}
-            component={Experience}
-          />
-          <Route path={process.env.PUBLIC_URL + "/blogs"} component={Blogs} />
-          <Route
-            path={process.env.PUBLIC_URL + "/my-2-years-at-IITB"}
-            component={TwoYearsAtIITB}
-          />
+          <Route path={"/"} exact component={Home} />
+          <Route path={"/project"} component={Projects} />
+          <Route path={"/about"} component={About} />
+          <Route path={"/experience"} component={Experience} />
+          <Route path={"/blogs"} component={Blogs} />
+          <Route path={"/my-2-years-at-IITB"} component={TwoYearsAtIITB} />
         </Switch>
         <Footer />
       </div>
