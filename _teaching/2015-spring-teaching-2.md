@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate Course"
 permalink: /teaching/2015-spring-teaching-1
 venue: "Indian Institute of Technology, "
-date: Spring 2021
+date: 2021-01-01
 location: "Mumbai, India"
 ---
 
