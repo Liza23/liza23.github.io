@@ -8,15 +8,12 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Research Labs"
+    url: /labs/
 
   - title: "Teaching"
     url: /teaching/    
-    
-  - title: "Labs"
-    url: /labs/
-        
+            
   - title: "Blogs"
     url: /blogs/
      
