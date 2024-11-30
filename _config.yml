@@ -12,7 +12,7 @@ title                    : "Liza Dahiya"
 title_separator          : "-"
 name                     : &name "Liza Dahiya"
 description              : &description "Researcher working at Honda RnD"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://liza23.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "liza23/liza23.github.io"
 
