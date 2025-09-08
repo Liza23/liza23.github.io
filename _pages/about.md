@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Presently, I'm working as an **AI Research Engineer** at [**Honda RnD**](https://global.honda/jp/RandD/hgsc/) in Tokyo, Japan. My work involves researching and developing vision-based intelligent autonomous robotic systems for new generation of Honda's [Autonomous Work Vehicle](https://www.honda.com/mobility/Autonomous-Work-Vehicle). 
+I'm currently an MSR student at Carnegie Mellon University.
+
+Before that, I'm was working as an **AI and Robotics Researcher** at [**Honda RnD**](https://global.honda/jp/RandD/hgsc/) in Tokyo, Japan. My work involves researching and developing vision-based intelligent autonomous robotic systems for new generation of Honda's [Autonomous Work Vehicle](https://www.honda.com/mobility/Autonomous-Work-Vehicle). 
 
 I have a broad range of **research interests**: AI and cognition, AI and neurological disorders, NLP, CV, and Robotics.
 
