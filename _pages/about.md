@@ -22,6 +22,6 @@ Previously, I interned at **Adobe Research** during Summer 2022, where I worked 
 Outside of research, I have varied hobbies and interests and have been part of some impactful ventures including - FeMeal, [IIT Mars Rover Team](https://iitbmartian.github.io/
 ), Chief Editor, [Bitstream](https://www.cse.iitb.ac.in/csea/event.php?event=17) and the [Lecture Over Latte's, Tokyo](https://www.meetup.com/study-group-cafe-tokyo/). I also enjoy participating in [Hackathons](https://www.linkedin.com/feed/update/urn:li:activity:7008530335772635136/)!
 
-Finally, if I have any time left, I write some blogs too here: [Medium](https://medium.com/@lizadahiya01) and [Confenssions-of-Teenage-Freak](https://voiceofheartblog.home.blog/). If I have even more time, I vlog my adventures in Tokyo [here](https://www.instagram.com/liza.in.tokyo).
+Finally, if I have any time left, I write some blogs too here: [Medium](https://medium.com/@lizadahiya01). If I have even more time, I vlog my adventures in Tokyo [here](https://www.instagram.com/liza.in.tokyo).
 
 ![alt text](../images/website_summary.png "a recap of my colorful life so far")
