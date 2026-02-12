@@ -14,8 +14,8 @@ $indent-var                 : 1.3em;
 
 /* system typefaces */
 $serif                      : Georgia, Times, serif;
-$sans-serif                 : 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-$monospace                  : 'Fira Code', 'JetBrains Mono', Monaco, Consolas, "Lucida Console", monospace;
+$sans-serif                 : 'Space Grotesk', 'Avenir Next', 'Segoe UI', sans-serif;
+$monospace                  : 'IBM Plex Mono', 'JetBrains Mono', Monaco, Consolas, "Lucida Console", monospace;
 
 /* sans serif typefaces */
 $sans-serif-narrow          : $sans-serif;
@@ -56,32 +56,32 @@ $sidebar-link-max-width     : 250px;
    ========================================================================== */
 
 /* Modern gradient color palette */
-$primary-gradient-start     : #667eea;  // Purple
-$primary-gradient-end       : #764ba2;  // Deep purple
-$accent-gradient-start      : #f093fb;  // Pink
-$accent-gradient-end        : #f5576c;  // Coral
-$teal-gradient-start        : #4facfe;  // Light blue
-$teal-gradient-end          : #00f2fe;  // Cyan
+$primary-gradient-start     : #ff8f3f;  // Tangerine
+$primary-gradient-end       : #ffcd4f;  // Mango
+$accent-gradient-start      : #2ec4b6;  // Aqua green
+$accent-gradient-end        : #20a4f3;  // Bright sky
+$teal-gradient-start        : #00b894;  // Teal
+$teal-gradient-end          : #00cec9;  // Mint cyan
 
 $gray                       : #7a8288;
-$dark-gray                  : #2d3748;  // Darker, richer gray
-$darker-gray                : #1a202c;  // Almost black
-$light-gray                 : #cbd5e0;  // Softer gray
-$lighter-gray               : #f7fafc;  // Very light gray
+$dark-gray                  : #2e2a48;
+$darker-gray                : #1b1732;
+$light-gray                 : #d9d6eb;
+$lighter-gray               : #fbf8f0;
 
 $body-color                 : #fff;
-$background-color           : #ffffff;
-$code-background-color      : #f7fafc;
+$background-color           : #fffaf2;
+$code-background-color      : #fff4e2;
 $code-background-color-dark : $light-gray;
 $text-color                 : $darker-gray;
-$border-color               : #e2e8f0;
+$border-color               : #e9ddca;
 
 /* Updated primary colors with modern palette */
-$primary-color              : #667eea;  // Modern purple
-$success-color              : #48bb78;  // Fresh green
-$warning-color              : #ed8936;  // Warm orange
-$danger-color               : #f56565;  // Bright red
-$info-color                 : #4299e1;  // Vibrant blue
+$primary-color              : #ff8f3f;
+$success-color              : #23b26d;
+$warning-color              : #f59e0b;
+$danger-color               : #ef4444;
+$info-color                 : #20a4f3;
 
 /* brands */
 $behance-color              : #1769FF;
