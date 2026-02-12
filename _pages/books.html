@@ -1,0 +1,13 @@
+---
+layout: archive
+title: "Books I've Read"
+permalink: /books/
+author_profile: true
+---
+
+<p>Books I have read recently, with short notes and highlights.</p>
+
+{% assign sorted_books = site.books | sort: "date" | reverse %}
+{% for post in sorted_books %}
+  {% include archive-single.html %}
+{% endfor %}
