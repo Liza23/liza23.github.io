@@ -1,10 +1,11 @@
 ---
 title: "Robust Depth-Aided Segmentation for Drivable Region Detection in Challenging Environments"
 collection: publications
-category: conferences
+category: workshops
 excerpt: 'This paper proposes a method for detecting drivable regions in challenging terrains using RGB-D data. By integrating depth information with semantic segmentation, our approach significantly improves detection accuracy across diverse landscapes. Leveraging the SegFormer architecture, we effectively distinguish drivable from non-drivable areas. Additionally, we introduce a depth-based refinement mechanism to ensure reliable performance in real-world scenarios. Extensive evaluation in both off-road and on-road environments confirms the effectiveness of our approach. Using the SA-1B dataset with grounded SAM, our method achieves precise delineation of road classes during training. Overall, this work advances autonomous navigation systems by providing a comprehensive solution for drivable region detection in complex terrains in real time, even on edge computing devices.'
 date: 2024-05-01
 venue: 'ICRA 2024 Workshop on Resilient Off-road Autonomy'
+cited_by: 0
 paperurl: 'https://openreview.net/forum?id=qzVdN0ZRt9'
 citation: 'Ramtekkar, V. V., Dahiya, L., Shah, N., Nishimiya, K., Kuroki, T., Song, C., ... & Jeon, M. H. Robust Depth-Aided Segmentation for Drivable Region Detection in Challenging Environments. In ICRA 2024 Workshop on Resilient Off-road Autonomy.'
 ---
