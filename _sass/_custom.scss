@@ -14,34 +14,64 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Modern gradient background for masthead */
+/* Modern gradient masthead */
 .masthead {
-  background: linear-gradient(135deg, $primary-gradient-start 0%, $primary-gradient-end 100%);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, $primary-gradient-start 0%, $primary-gradient-end 100%) !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 
-  .site-title {
-    color: white !important;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+  .masthead__inner-wrap {
+    background: transparent;
   }
 
   .greedy-nav {
+    background: transparent !important;
+
     a {
-      color: white !important;
+      color: rgba(255, 255, 255, 0.9) !important;
       font-weight: 500;
       transition: all 0.3s ease;
 
       &:hover {
+        color: white !important;
         transform: translateY(-2px);
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
     }
 
-    .visible-links a {
-      color: white !important;
+    .visible-links {
+      a {
+        color: rgba(255, 255, 255, 0.85) !important;
 
-      &:before {
-        background: white;
+        &:before {
+          background: white;
+        }
+
+        &:hover {
+          color: white !important;
+        }
+      }
+
+      li:first-child a {
+        color: white !important;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+    }
+
+    button {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .hidden-links {
+      background: white;
+
+      a {
+        color: $darker-gray !important;
+
+        &:hover {
+          color: $primary-color !important;
+          background: $lighter-gray;
+        }
       }
     }
   }
