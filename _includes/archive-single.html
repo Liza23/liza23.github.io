@@ -27,7 +27,16 @@
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
+      {% assign is_undergrad_teaching = false %}
+      {% if post.collection == 'teaching' and post.type %}
+        {% assign teaching_type = post.type | downcase %}
+        {% if teaching_type contains 'undergraduate' %}
+          {% assign is_undergrad_teaching = true %}
+        {% endif %}
+      {% endif %}
+      {% if is_undergrad_teaching or post.collection == 'publications' %}
+        {{ title }}
+      {% elsif post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
@@ -41,10 +50,17 @@
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-          {% if post.cited_by %}
-            <p>Cited by {{ post.cited_by }}</p>
+          {% if post.authors %}
+            <p>{{ post.authors }}</p>
           {% endif %}
+          <p>
+            <i>{{ post.venue_short | default: post.venue }}</i>
+            {% if post.paperurl %}
+              / <a href="{{ post.paperurl }}">{{ post.link_label | default: "Paper" }}</a>
+            {% else %}
+              / {{ post.link_label | default: "Paper" }}
+            {% endif %}
+          </p>
         {% elsif post.collection == 'books' %}
           <p>
             {% if post.author %}By <i>{{ post.author }}</i>{% endif %}
