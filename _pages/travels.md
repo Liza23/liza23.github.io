@@ -159,8 +159,8 @@ author_profile: true
 
 <div class="map-tooltip" id="map-tooltip"></div>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="/assets/js/d3.v7.min.js"></script>
+<script src="/assets/js/topojson-client.min.js"></script>
 <script>
 (function () {
   var visitedIds = {
@@ -200,7 +200,7 @@ author_profile: true
 
   var geoPath = d3.geoPath().projection(projection);
 
-  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+  d3.json('/assets/data/countries-110m.json')
     .then(function (world) {
       var countries = topojson.feature(world, world.objects.countries);
 
