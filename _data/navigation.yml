@@ -20,6 +20,9 @@ main:
   - title: "Books"
     url: /books/
 
+  - title: "Travels"
+    url: /travels/
+
   - title: "Portfolio"
     url: /portfolio/
 
