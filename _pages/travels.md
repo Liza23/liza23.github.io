@@ -77,36 +77,6 @@ author_profile: true
   color: #a3a39f;
 }
 
-.map-country {
-  fill: #f2f1ed;
-  stroke: #d4d3cb;
-  stroke-width: 0.4;
-  transition: fill 0.12s ease;
-}
-
-.map-country.visited {
-  fill: #111110;
-  cursor: pointer;
-}
-
-.map-country.visited:hover {
-  fill: #3a3a38;
-}
-
-.map-country:not(.visited):hover {
-  fill: #e6e5e0;
-}
-
-.map-graticule {
-  fill: none;
-  stroke: #e8e7e3;
-  stroke-width: 0.3;
-}
-
-.map-sphere {
-  fill: #f9f9f7;
-}
-
 .map-legend {
   display: flex;
   align-items: center;
@@ -122,23 +92,18 @@ author_profile: true
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 0.45em;
+  gap: 0.5em;
 }
 
-.legend-swatch {
-  width: 13px;
-  height: 13px;
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
   flex-shrink: 0;
 }
 
-.legend-swatch.visited {
-  background: #111110;
-}
-
-.legend-swatch.unvisited {
-  background: #f2f1ed;
-  border: 1px solid #d4d3cb;
-}
+.legend-dot.visited  { background: #111110; }
+.legend-dot.unvisited { background: #d4d3cb; }
 
 .map-tooltip {
   position: fixed;
@@ -179,14 +144,14 @@ author_profile: true
 </div>
 
 <div id="travel-map-container">
-  <div id="travel-map"><div class="map-loading">loading map...</div></div>
+  <div id="travel-map"><div class="map-loading">building dot map...</div></div>
   <div class="map-legend">
     <div class="legend-item">
-      <div class="legend-swatch visited"></div>
+      <div class="legend-dot visited"></div>
       <span>visited</span>
     </div>
     <div class="legend-item">
-      <div class="legend-swatch unvisited"></div>
+      <div class="legend-dot unvisited"></div>
       <span>not yet</span>
     </div>
   </div>
@@ -198,7 +163,6 @@ author_profile: true
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script>
 (function () {
-  // ISO 3166-1 numeric codes for visited countries
   var visitedIds = {
     356: 'India',
     392: 'Japan',
@@ -215,66 +179,99 @@ author_profile: true
     56:  'Belgium'
   };
 
-  var tooltip = document.getElementById('map-tooltip');
-  var mapDiv = document.getElementById('travel-map');
+  var tooltip  = document.getElementById('map-tooltip');
+  var mapDiv   = document.getElementById('travel-map');
 
-  var width = 960;
-  var height = 480;
+  var W = 960, H = 480;
+  var DOT_SPACING = 6;   // px between dot centres
+  var DOT_R_UNVISITED = 1.6;
+  var DOT_R_VISITED   = 2.2;
 
   var svg = d3.select('#travel-map')
     .html('')
     .append('svg')
-    .attr('viewBox', '0 0 ' + width + ' ' + height)
-    .attr('preserveAspectRatio', 'xMidYMid meet');
+    .attr('viewBox', '0 0 ' + W + ' ' + H)
+    .attr('preserveAspectRatio', 'xMidYMid meet')
+    .style('background', '#ffffff');
 
   var projection = d3.geoNaturalEarth1()
     .scale(155)
-    .translate([width / 2, height / 2 + 10]);
+    .translate([W / 2, H / 2 + 10]);
 
-  var path = d3.geoPath().projection(projection);
-
-  // Ocean background
-  svg.append('path')
-    .datum({ type: 'Sphere' })
-    .attr('class', 'map-sphere')
-    .attr('d', path);
-
-  // Graticule
-  svg.append('path')
-    .datum(d3.geoGraticule()())
-    .attr('class', 'map-graticule')
-    .attr('d', path);
-
-  var countryGroup = svg.append('g');
+  var geoPath = d3.geoPath().projection(projection);
 
   d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
     .then(function (world) {
       var countries = topojson.feature(world, world.objects.countries);
 
-      countryGroup.selectAll('path')
-        .data(countries.features)
-        .join('path')
-        .attr('class', function (d) {
-          var id = +d.id;
-          return visitedIds[id] ? 'map-country visited' : 'map-country';
-        })
-        .attr('d', path)
-        .on('mousemove', function (event, d) {
-          var id = +d.id;
-          var name = visitedIds[id];
-          if (name) {
-            tooltip.textContent = name;
-            tooltip.style.opacity = '1';
-            tooltip.style.left = (event.clientX + 14) + 'px';
-            tooltip.style.top = (event.clientY - 10) + 'px';
+      /* ── 1. Build dot grid ────────────────────────────────── */
+      var visitedDots   = [];
+      var unvisitedDots = [];
+
+      for (var x = DOT_SPACING / 2; x < W; x += DOT_SPACING) {
+        for (var y = DOT_SPACING / 2; y < H; y += DOT_SPACING) {
+          var coords = projection.invert([x, y]);
+          if (!coords) continue;
+
+          for (var i = 0; i < countries.features.length; i++) {
+            var f  = countries.features[i];
+            if (d3.geoContains(f, coords)) {
+              var id = +f.id;
+              if (visitedIds[id]) {
+                visitedDots.push({ x: x, y: y, name: visitedIds[id] });
+              } else {
+                unvisitedDots.push({ x: x, y: y });
+              }
+              break;
+            }
           }
+        }
+      }
+
+      /* ── 2. Draw unvisited dots (light) ───────────────────── */
+      svg.append('g')
+        .selectAll('circle')
+        .data(unvisitedDots)
+        .join('circle')
+        .attr('cx', function (d) { return d.x; })
+        .attr('cy', function (d) { return d.y; })
+        .attr('r',  DOT_R_UNVISITED)
+        .attr('fill', '#d4d3cb');
+
+      /* ── 3. Draw visited dots (dark, slightly larger) ─────── */
+      svg.append('g')
+        .selectAll('circle')
+        .data(visitedDots)
+        .join('circle')
+        .attr('cx', function (d) { return d.x; })
+        .attr('cy', function (d) { return d.y; })
+        .attr('r',  DOT_R_VISITED)
+        .attr('fill', '#111110');
+
+      /* ── 4. Invisible hit areas for visited countries ─────── */
+      svg.append('g')
+        .selectAll('path')
+        .data(countries.features.filter(function (d) {
+          return !!visitedIds[+d.id];
+        }))
+        .join('path')
+        .attr('d', geoPath)
+        .attr('fill', 'transparent')
+        .attr('stroke', 'none')
+        .style('cursor', 'pointer')
+        .on('mousemove', function (event, d) {
+          var name = visitedIds[+d.id];
+          tooltip.textContent = name;
+          tooltip.style.opacity = '1';
+          tooltip.style.left = (event.clientX + 14) + 'px';
+          tooltip.style.top  = (event.clientY - 10) + 'px';
         })
         .on('mouseleave', function () {
           tooltip.style.opacity = '0';
         });
     })
     .catch(function () {
-      mapDiv.innerHTML = '<div class="map-loading">map unavailable — check your connection</div>';
+      mapDiv.innerHTML = '<div class="map-loading">map unavailable — check connection</div>';
     });
 })();
 </script>
