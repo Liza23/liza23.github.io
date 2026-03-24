@@ -1,17 +1,27 @@
 .container {
-    width:100%;
-    border:1px solid #d3d3d3;
+    width: 100%;
+    border: 1px solid #d4d3cb;
 }
 .container div {
-    width:100%;
+    width: 100%;
 }
 .container .header {
-    background-color:#d3d3d3;
-    padding: 2px;
+    background-color: #f2f1ed;
+    padding: 0.5em 0.75em;
     cursor: pointer;
-    font-weight: bold;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #111110;
+    transition: background 0.15s ease;
+}
+.container .header:hover {
+    background-color: #e8e7e3;
 }
 .container .content {
     display: none;
-    padding : 5px;
+    padding: 0.75em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #6b6b68;
 }

@@ -8,132 +8,121 @@ author_profile: true
 <style>
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2em;
-  margin-top: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85em;
+  margin-top: 1.4em;
 }
 
 .blog-card {
-  background: white;
-  border-radius: 12px;
-  padding: 2em;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
+  background: #ffffff;
+  border: 1px solid #d4d3cb;
+  padding: 1.3em 1.4em;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
   position: relative;
-  overflow: hidden;
-}
-
-.blog-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
 }
 
 .blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
-  border-color: #667eea;
-}
-
-.blog-card:hover::before {
-  transform: scaleX(1);
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 0 #111110;
 }
 
 .blog-title {
-  font-size: 1.4em;
-  font-weight: 700;
-  margin-bottom: 0.5em;
-  color: #1a202c;
-  line-height: 1.3;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: #111110;
 }
 
 .blog-title a {
-  color: #1a202c;
+  color: #111110;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .blog-title a:hover {
-  color: #667eea;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .blog-excerpt {
-  color: #2d3748;
-  line-height: 1.6;
-  margin-bottom: 1em;
-  font-size: 0.95em;
+  font-family: 'Inter', sans-serif;
+  color: #6b6b68;
+  line-height: 1.65;
+  margin-bottom: 0.85em;
+  font-size: 0.82rem;
 }
 
 .blog-meta {
   display: flex;
   align-items: center;
-  gap: 1em;
-  font-size: 0.85em;
-  color: #718096;
-  margin-bottom: 1em;
+  gap: 0.75em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: #a3a39f;
+  margin-bottom: 0.7em;
 }
 
 .blog-tag {
   display: inline-block;
-  padding: 0.3em 0.8em;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  border-radius: 20px;
-  font-size: 0.75em;
-  font-weight: 600;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
+  padding: 0.15em 0.5em;
+  background: transparent;
+  color: #6b6b68;
+  border: 1px solid #d4d3cb;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 400;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
 }
 
 .blog-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
-  color: #667eea;
-  font-weight: 600;
+  gap: 0.3em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: #6b6b68;
+  font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+  transition: color 0.15s ease;
 }
 
 .blog-link:hover {
-  color: #764ba2;
-  transform: translateX(5px);
+  color: #111110;
 }
 
 .section-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 3em;
-  color: #2d3748;
-  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #6b6b68;
+  line-height: 1.75;
+  margin-bottom: 1.4em;
 }
 
 .medium-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
-  padding: 0.8em 1.5em;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  border-radius: 50px;
+  gap: 0.35em;
+  padding: 0.3em 0.85em;
+  background: transparent;
+  color: #111110;
+  border: 1px solid #111110;
   text-decoration: none;
-  font-weight: 600;
-  margin: 2em auto;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .medium-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-  color: white;
+  background: #111110;
+  color: #f9f9f7;
 }
 </style>
 
