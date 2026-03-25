@@ -64,6 +64,12 @@
       cover: "/images/books/9780375704024.jpg"
       rating: 4.5
 
+    - title: "White Nights"
+      author: "Fyodor Dostoevsky"
+      note: ""
+      cover: "/images/books/51lMJWnnRDL.jpg"
+      rating: 4.5
+
 - section: "2023"
   books:
     - title: "Days at the Morisaki Bookshop"
@@ -89,7 +95,7 @@
     - title: "The Courage to Be Disliked"
       author: "Ichiro Kishimi & Fumitake Koga"
       note: "hard-to-swallow truths, must-read"
-      cover: "/images/books/9781501197277.jpg"
+      cover: "/images/books/9781982132620.jpg"
       rating: 4.5
 
     - title: "The Sleep Solution"
@@ -109,6 +115,14 @@
       note: "grass isn't always greener on the other side"
       cover: "/images/books/9780525559474.jpg"
       rating: 3.5
+
+- section: "2021"
+  books:
+    - title: "Ikigai: The Japanese Secret to a Long and Happy Life"
+      author: "Héctor García & Francesc Miralles"
+      note: ""
+      cover: "/images/books/9780143130727.jpg"
+      rating: 4.5
 
 - section: "abandoned"
   books: []
