@@ -95,7 +95,7 @@
     - title: "The Courage to Be Disliked"
       author: "Ichiro Kishimi & Fumitake Koga"
       note: "hard-to-swallow truths, must-read"
-      cover: "/images/books/9781982132620.jpg"
+      cover: "/images/books/9781501197277.jpg"
       rating: 4.5
 
     - title: "The Sleep Solution"
@@ -122,6 +122,20 @@
       author: "Héctor García & Francesc Miralles"
       note: ""
       cover: "/images/books/9780143130727.jpg"
+      rating: 4.5
+
+    - title: "Tuesdays with Morrie"
+      author: "Mitch Albom"
+      note: ""
+      cover: "/images/books/9780767905923.jpg"
+      rating: 4.5
+
+- section: "2020"
+  books:
+    - title: "The Subtle Art of Not Giving a F*ck"
+      author: "Mark Manson"
+      note: ""
+      cover: "/images/books/9780062457714.jpg"
       rating: 4.5
 
 - section: "abandoned"
