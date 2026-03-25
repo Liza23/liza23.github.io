@@ -43,6 +43,12 @@
 
 - section: "2025"
   books:
+    - title: "Days at the Morisaki Bookshop"
+      author: "Satoshi Yagisawa"
+      note: ""
+      cover: "/images/books/morisaki-bookshop.jpg"
+      rating: 4.5
+
     - title: "The Little Coffee Shop of Kabul"
       author: "Deborah Rodriguez"
       note: "pretty decent, second half gets interesting"
@@ -61,17 +67,23 @@
       cover: "/images/books/9781400052189.jpg"
       rating: 4.25
 
-    - title: "Days at the Morisaki Bookshop"
-      author: "Satoshi Yagisawa"
-      note: ""
-      cover: "/images/books/morisaki-bookshop.jpg"
-      rating: 4.5
-
     - title: "The Catcher in the Rye"
       author: "J. D. Salinger"
       note: ""
       cover: "/images/books/9780316769488.jpg"
       rating: 4.25
+
+    - title: "A Short History of Florence"
+      author: "Franco Cardini"
+      note: ""
+      cover: "/images/books/short-history-florence.jpg"
+      rating: 4.5
+
+    - title: "The Prague Golem: Jewish Stories of the Ghetto"
+      author: "Soňa Marešová"
+      note: ""
+      cover: "/images/books/prague-golem.jpg"
+      rating: 4.5
 
 - section: "2024"
   books:
