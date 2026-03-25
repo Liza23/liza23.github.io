@@ -343,6 +343,18 @@ a:hover {
     font-style: normal;
     margin: 1.5em 0;
   }
+
+  /* Match body copy — theme defaults used Georgia for captions */
+  figure,
+  figcaption {
+    font-family: var(--sans);
+  }
+
+  figcaption {
+    color: var(--fg-muted);
+    font-size: 0.83rem;
+    line-height: 1.5;
+  }
 }
 
 /* ─── Archive / Collection items ──────────────────────────────────────────── */
