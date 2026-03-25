@@ -70,6 +70,12 @@
       cover: "/images/books/51lMJWnnRDL.jpg"
       rating: 4.5
 
+    - title: "The Art of Seduction"
+      author: "Robert Greene"
+      note: ""
+      cover: "/images/books/9780142001196.jpg"
+      rating: 4.5
+
 - section: "2023"
   books:
     - title: "Days at the Morisaki Bookshop"
