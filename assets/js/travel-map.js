@@ -15,15 +15,18 @@
     56:  'Belgium'
   };
 
+  var COLOR_UNVISITED = '#b0bec5';
+  var COLOR_VISITED   = '#111110';
+  var DOT_SPACING     = 5;
+  var DOT_R           = 1.2;
+  var DOT_R_VISITED   = 1.5;
+
   function init() {
     var tooltip = document.getElementById('map-tooltip');
     var mapDiv  = document.getElementById('travel-map');
     if (!mapDiv || !tooltip) return;
 
-    var W = 960, H = 480;
-    var DOT_SPACING = 6;
-    var DOT_R_UNVISITED = 1.6;
-    var DOT_R_VISITED   = 2.2;
+    var W = 960, H = 500;
 
     var svg = d3.select('#travel-map')
       .html('')
@@ -32,24 +35,47 @@
       .attr('preserveAspectRatio', 'xMidYMid meet')
       .style('background', '#ffffff');
 
-    var projection = d3.geoNaturalEarth1()
-      .scale(155)
-      .translate([W / 2, H / 2 + 10]);
+    var g = svg.append('g');
+
+    var projection = d3.geoEquirectangular()
+      .scale(150)
+      .translate([W / 2, H / 2 + 20]);
 
     var geoPath = d3.geoPath().projection(projection);
+
+    var zoom = d3.zoom()
+      .scaleExtent([1, 8])
+      .translateExtent([[0, 0], [W, H]])
+      .on('zoom', function (event) {
+        g.attr('transform', event.transform);
+      });
+
+    svg.call(zoom);
+
+    var zoomIn  = document.getElementById('zoom-in');
+    var zoomOut = document.getElementById('zoom-out');
+    if (zoomIn) {
+      zoomIn.addEventListener('click', function () {
+        svg.transition().duration(300).call(zoom.scaleBy, 1.5);
+      });
+    }
+    if (zoomOut) {
+      zoomOut.addEventListener('click', function () {
+        svg.transition().duration(300).call(zoom.scaleBy, 1 / 1.5);
+      });
+    }
 
     d3.json('/assets/data/countries-110m.json')
       .then(function (world) {
         var countries = topojson.feature(world, world.objects.countries);
 
-        /* ── Build dot grid ─────────────────────────────── */
         var visitedDots   = [];
         var unvisitedDots = [];
 
         for (var x = DOT_SPACING / 2; x < W; x += DOT_SPACING) {
           for (var y = DOT_SPACING / 2; y < H; y += DOT_SPACING) {
             var coords = projection.invert([x, y]);
-            if (!coords) continue;
+            if (!coords || isNaN(coords[0]) || isNaN(coords[1])) continue;
 
             for (var i = 0; i < countries.features.length; i++) {
               var f = countries.features[i];
@@ -66,28 +92,25 @@
           }
         }
 
-        /* ── Draw unvisited dots (light gray) ───────────── */
-        svg.append('g')
+        g.append('g')
           .selectAll('circle')
           .data(unvisitedDots)
           .join('circle')
           .attr('cx', function (d) { return d.x; })
           .attr('cy', function (d) { return d.y; })
-          .attr('r', DOT_R_UNVISITED)
-          .attr('fill', '#d4d3cb');
+          .attr('r', DOT_R)
+          .attr('fill', COLOR_UNVISITED);
 
-        /* ── Draw visited dots (dark, larger) ───────────── */
-        svg.append('g')
+        g.append('g')
           .selectAll('circle')
           .data(visitedDots)
           .join('circle')
           .attr('cx', function (d) { return d.x; })
           .attr('cy', function (d) { return d.y; })
           .attr('r', DOT_R_VISITED)
-          .attr('fill', '#111110');
+          .attr('fill', COLOR_VISITED);
 
-        /* ── Invisible hit areas for tooltip ─────────────── */
-        svg.append('g')
+        g.append('g')
           .selectAll('path')
           .data(countries.features.filter(function (d) {
             return !!visitedIds[+d.id];
