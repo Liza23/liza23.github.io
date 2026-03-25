@@ -1,0 +1,17 @@
+# Bookshelf data – books are grouped by section (year or label).
+# Each book can have: title, author, note, cover, rating (out of 5).
+# For covers, use Open Library: https://covers.openlibrary.org/b/isbn/{ISBN}-M.jpg
+
+- section: "to read"
+  books: []
+
+- section: "2026"
+  books:
+    - title: "Atomic Habits"
+      author: "James Clear"
+      note: "small changes, remarkable results"
+      cover: "https://covers.openlibrary.org/b/isbn/0735211299-M.jpg"
+      rating: 4.5
+
+- section: "abandoned"
+  books: []
