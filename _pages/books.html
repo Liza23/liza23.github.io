@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "bookshelf"
+title: "pandaliza's quiet library"
 permalink: /books/
 author_profile: true
 ---
@@ -13,9 +13,11 @@ author_profile: true
   margin-bottom: .15em;
   font-style: italic;
 }
-.bookshelf-cta {
-  font-size: .88rem;
-  color: #888;
+.bookshelf-intro + .bookshelf-intro {
+  margin-top: .35em;
+  color: #6b6b68;
+}
+.bookshelf-intro:last-of-type {
   margin-bottom: 2em;
 }
 
@@ -163,7 +165,7 @@ author_profile: true
 </style>
 
 <p class="bookshelf-intro">do you ever read something and feel nostalgic about a place you have never been to?</p>
-<p class="bookshelf-cta">send me your book recommendations!</p>
+<p class="bookshelf-intro">reading a million books and living a million different lives</p>
 
 {% for section in site.data.bookshelf %}
 <div class="bookshelf-section">

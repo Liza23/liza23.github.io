@@ -1,8 +1,19 @@
 # Bookshelf data – books are grouped by section (year or label).
 # Cover images live in /images/books/ (filenames = ISBN used when fetching).
 
-- section: "to read"
-  books: []
+- section: "currently reading"
+  books:
+    - title: "Notes from Underground"
+      author: "Fyodor Dostoevsky"
+      note: ""
+      cover: "/images/books/notes-from-underground.jpg"
+      rating: 4.5
+
+    - title: "The Master: The Long Run and Beautiful Game of Roger Federer"
+      author: "Christopher Clarey"
+      note: ""
+      cover: "/images/books/the-master-federer.jpg"
+      rating: 4.5
 
 - section: "2026"
   books:
@@ -30,12 +41,6 @@
       cover: "/images/books/9780802158741.jpg"
       rating: 4.5
 
-    - title: "The Catcher in the Rye"
-      author: "J. D. Salinger"
-      note: ""
-      cover: "/images/books/9780316769488.jpg"
-      rating: 4.25
-
 - section: "2025"
   books:
     - title: "The Little Coffee Shop of Kabul"
@@ -62,6 +67,12 @@
       cover: "/images/books/morisaki-bookshop.jpg"
       rating: 4.5
 
+    - title: "The Catcher in the Rye"
+      author: "J. D. Salinger"
+      note: ""
+      cover: "/images/books/9780316769488.jpg"
+      rating: 4.25
+
 - section: "2024"
   books:
     - title: "Norwegian Wood"
@@ -86,6 +97,18 @@
       author: "Alex Michaelides"
       note: ""
       cover: "/images/books/9781250301703.jpg"
+      rating: 4.5
+
+    - title: "The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery"
+      author: "Brianna Wiest"
+      note: ""
+      cover: "/images/books/mountain-is-you.jpg"
+      rating: 4.5
+
+    - title: "The Picture of Dorian Gray"
+      author: "Oscar Wilde"
+      note: ""
+      cover: "/images/books/9780141439570.jpg"
       rating: 4.5
 
 - section: "2023"
@@ -114,10 +137,16 @@
       cover: "/images/books/doglapan.jpg"
       rating: 4.5
 
-    - title: "The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery"
-      author: "Brianna Wiest"
+    - title: "Grit: The Power of Passion and Perseverance"
+      author: "Angela Duckworth"
       note: ""
-      cover: "/images/books/mountain-is-you.jpg"
+      cover: "/images/books/9781501111105.jpg"
+      rating: 4.5
+
+    - title: "Surrounded by Psychopaths: How to Protect Yourself from Being Manipulated and Exploited in Business (and in Life)"
+      author: "Thomas Erikson"
+      note: "Surrounded by Idiots series"
+      cover: "/images/books/surrounded-by-psychopaths.jpg"
       rating: 4.5
 
 - section: "2022"
@@ -178,6 +207,12 @@
       cover: "/images/books/9780062073488.jpg"
       rating: 4.5
 
+    - title: "The Man Who Mistook His Wife for a Hat"
+      author: "Oliver Sacks"
+      note: ""
+      cover: "/images/books/9780684853949.jpg"
+      rating: 4.5
+
 - section: "2020"
   books:
     - title: "The Subtle Art of Not Giving a F*ck"
@@ -196,6 +231,24 @@
       author: "Dale Carnegie"
       note: ""
       cover: "/images/books/9780671027032.jpg"
+      rating: 4.5
+
+    - title: "Dream with Your Eyes Open: An Entrepreneurial Journey"
+      author: "Ronnie Screwvala"
+      note: ""
+      cover: "/images/books/dream-with-your-eyes-open.jpg"
+      rating: 4.5
+
+    - title: "The Da Vinci Code"
+      author: "Dan Brown"
+      note: ""
+      cover: "/images/books/9780385504218.jpg"
+      rating: 4.5
+
+    - title: "The Bell Jar"
+      author: "Sylvia Plath"
+      note: ""
+      cover: "/images/books/9780060837020.jpg"
       rating: 4.5
 
 - section: "abandoned"
