@@ -20,7 +20,7 @@
 
     - title: "Sweet Bean Paste"
       author: "Durian Sukegawa"
-      note: ""
+      note: "Finished the first 200 pages in one sitting. Realized something bad will happen to the main character and didn't read the remaining 50 pages for another month. Lovely japanese, heartwarming story."
       cover: "/images/books/9781786071958.jpg"
       rating: 4.5
 
@@ -55,6 +55,22 @@
       note: "thoroughly researched, learnt so much about black history and science"
       cover: "/images/books/9781400052189.jpg"
       rating: 4.25
+
+- section: "2024"
+  books:
+    - title: "Norwegian Wood"
+      author: "Haruki Murakami"
+      note: "Read this book on my first solo trip in Japan. Was deeply touched."
+      cover: "/images/books/9780375704024.jpg"
+      rating: 4.5
+
+- section: "2023"
+  books:
+    - title: "Days at the Morisaki Bookshop"
+      author: "Satoshi Yagisawa"
+      note: ""
+      cover: "/images/books/morisaki-bookshop.jpg"
+      rating: 4.5
 
 - section: "2022"
   books:
