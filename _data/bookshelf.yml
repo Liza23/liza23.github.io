@@ -56,6 +56,12 @@
       cover: "/images/books/9781400052189.jpg"
       rating: 4.25
 
+    - title: "Days at the Morisaki Bookshop"
+      author: "Satoshi Yagisawa"
+      note: ""
+      cover: "/images/books/morisaki-bookshop.jpg"
+      rating: 4.5
+
 - section: "2024"
   books:
     - title: "Norwegian Wood"
@@ -76,12 +82,42 @@
       cover: "/images/books/9780142001196.jpg"
       rating: 4.5
 
+    - title: "The Silent Patient"
+      author: "Alex Michaelides"
+      note: ""
+      cover: "/images/books/9781250301703.jpg"
+      rating: 4.5
+
 - section: "2023"
   books:
-    - title: "Days at the Morisaki Bookshop"
-      author: "Satoshi Yagisawa"
+    - title: "Before the Coffee Gets Cold"
+      author: "Toshikazu Kawaguchi"
       note: ""
-      cover: "/images/books/morisaki-bookshop.jpg"
+      cover: "/images/books/before-coffee-gets-cold.jpg"
+      rating: 4.5
+
+    - title: "The Psychology of Money"
+      author: "Morgan Housel"
+      note: ""
+      cover: "/images/books/9780857197689.jpg"
+      rating: 4.5
+
+    - title: "The Almanack of Naval Ravikant"
+      author: "Eric Jorgenson"
+      note: ""
+      cover: "/images/books/9781544514222.jpg"
+      rating: 4.5
+
+    - title: "Doglapan: The Hard Truth about Life and Start-Ups"
+      author: "Ashneer Grover"
+      note: ""
+      cover: "/images/books/doglapan.jpg"
+      rating: 4.5
+
+    - title: "The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery"
+      author: "Brianna Wiest"
+      note: ""
+      cover: "/images/books/mountain-is-you.jpg"
       rating: 4.5
 
 - section: "2022"
@@ -136,12 +172,30 @@
       cover: "/images/books/9780767905923.jpg"
       rating: 4.5
 
+    - title: "And Then There Were None"
+      author: "Agatha Christie"
+      note: "iconic 1939 mystery"
+      cover: "/images/books/9780062073488.jpg"
+      rating: 4.5
+
 - section: "2020"
   books:
     - title: "The Subtle Art of Not Giving a F*ck"
       author: "Mark Manson"
       note: ""
       cover: "/images/books/9780062457714.jpg"
+      rating: 4.5
+
+    - title: "Shoe Dog"
+      author: "Phil Knight"
+      note: ""
+      cover: "/images/books/9781501135927.jpg"
+      rating: 4.5
+
+    - title: "How to Win Friends and Influence People"
+      author: "Dale Carnegie"
+      note: ""
+      cover: "/images/books/9780671027032.jpg"
       rating: 4.5
 
 - section: "abandoned"
