@@ -7,11 +7,35 @@
 
 - section: "2026"
   books:
-    - title: "Atomic Habits"
-      author: "James Clear"
-      note: "small changes, remarkable results"
-      cover: "https://covers.openlibrary.org/b/isbn/0735211299-M.jpg"
+    - title: "1984"
+      author: "George Orwell"
+      note: ""
+      cover: "https://covers.openlibrary.org/b/isbn/9780451524935-M.jpg"
+      rating: 5.0
+
+    - title: "A Long Winter"
+      author: "Colm Tóibín"
+      note: ""
+      cover: "https://covers.openlibrary.org/b/isbn/9781476785080-M.jpg"
+      rating: 4.0
+
+    - title: "Sweet Bean Paste"
+      author: "Durian Sukegawa"
+      note: ""
+      cover: "https://covers.openlibrary.org/b/isbn/9781786071958-M.jpg"
       rating: 4.5
+
+    - title: "Small Things Like These"
+      author: "Claire Keegan"
+      note: ""
+      cover: "https://covers.openlibrary.org/b/isbn/9780571368709-M.jpg"
+      rating: 4.5
+
+    - title: "The Catcher in the Rye"
+      author: "J. D. Salinger"
+      note: ""
+      cover: "https://covers.openlibrary.org/b/isbn/9780316769488-M.jpg"
+      rating: 4.25
 
 - section: "abandoned"
   books: []
