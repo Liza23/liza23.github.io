@@ -1,6 +1,5 @@
 # Bookshelf data – books are grouped by section (year or label).
-# Each book can have: title, author, note, cover, rating (out of 5).
-# For covers, use Open Library: https://covers.openlibrary.org/b/isbn/{ISBN}-M.jpg
+# Cover images live in /images/books/ (filenames = ISBN used when fetching).
 
 - section: "to read"
   books: []
@@ -10,31 +9,31 @@
     - title: "1984"
       author: "George Orwell"
       note: ""
-      cover: "https://covers.openlibrary.org/b/isbn/9780451524935-M.jpg"
+      cover: "/images/books/9780451524935.jpg"
       rating: 5.0
 
     - title: "A Long Winter"
       author: "Colm Tóibín"
       note: ""
-      cover: "https://covers.openlibrary.org/b/isbn/9781476785080-M.jpg"
+      cover: "/images/books/9781476785080.jpg"
       rating: 4.0
 
     - title: "Sweet Bean Paste"
       author: "Durian Sukegawa"
       note: ""
-      cover: "https://covers.openlibrary.org/b/isbn/9781786071958-M.jpg"
+      cover: "/images/books/9781786071958.jpg"
       rating: 4.5
 
     - title: "Small Things Like These"
       author: "Claire Keegan"
       note: ""
-      cover: "https://covers.openlibrary.org/b/isbn/9780571368709-M.jpg"
+      cover: "/images/books/9780571368709.jpg"
       rating: 4.5
 
     - title: "The Catcher in the Rye"
       author: "J. D. Salinger"
       note: ""
-      cover: "https://covers.openlibrary.org/b/isbn/9780316769488-M.jpg"
+      cover: "/images/books/9780316769488.jpg"
       rating: 4.25
 
 - section: "2025"
@@ -42,19 +41,19 @@
     - title: "The Little Coffee Shop of Kabul"
       author: "Deborah Rodriguez"
       note: "pretty decent, second half gets interesting"
-      cover: "https://covers.openlibrary.org/b/isbn/9780451401878-M.jpg"
+      cover: "/images/books/9780451401878.jpg"
       rating: 3.25
 
     - title: "A Study in Scarlet"
       author: "Arthur Conan Doyle"
       note: "such a page-turner — get me a man who waits 20 years for revenge"
-      cover: "https://covers.openlibrary.org/b/isbn/9780140439083-M.jpg"
+      cover: "/images/books/9780140439083.jpg"
       rating: 4.25
 
     - title: "The Immortal Life of Henrietta Lacks"
       author: "Rebecca Skloot"
       note: "thoroughly researched, learnt so much about black history and science"
-      cover: "https://covers.openlibrary.org/b/isbn/9781400052189-M.jpg"
+      cover: "/images/books/9781400052189.jpg"
       rating: 4.25
 
 - section: "2022"
@@ -62,37 +61,37 @@
     - title: "A Thousand Splendid Suns"
       author: "Khaled Hosseini"
       note: "the book that made me cry"
-      cover: "https://covers.openlibrary.org/b/isbn/9781594481857-M.jpg"
+      cover: "/images/books/9781594481857.jpg"
       rating: 5.0
 
     - title: "Anxious People"
       author: "Fredrik Backman"
       note: "tragic, funny, witty — it is about real love"
-      cover: "https://covers.openlibrary.org/b/isbn/9781501160837-M.jpg"
+      cover: "/images/books/9781501160837.jpg"
       rating: 5.0
 
     - title: "The Courage to Be Disliked"
       author: "Ichiro Kishimi & Fumitake Koga"
       note: "hard-to-swallow truths, must-read"
-      cover: "https://covers.openlibrary.org/b/isbn/9781501197277-M.jpg"
+      cover: "/images/books/9781501197277.jpg"
       rating: 4.5
 
     - title: "The Sleep Solution"
       author: "W. Chris Winter, MD"
       note: "witty, informative — science of why we sleep"
-      cover: "https://covers.openlibrary.org/b/isbn/9780399583612-M.jpg"
+      cover: "/images/books/9780399583612.jpg"
       rating: 4.0
 
     - title: "Leaders Eat Last"
       author: "Simon Sinek"
       note: "a useful leadership guide for beginners"
-      cover: "https://covers.openlibrary.org/b/isbn/9781591845324-M.jpg"
+      cover: "/images/books/9781591845324.jpg"
       rating: 4.0
 
     - title: "The Midnight Library"
       author: "Matt Haig"
       note: "grass isn't always greener on the other side"
-      cover: "https://covers.openlibrary.org/b/isbn/9780525559474-M.jpg"
+      cover: "/images/books/9780525559474.jpg"
       rating: 3.5
 
 - section: "abandoned"
