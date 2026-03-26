@@ -38,15 +38,15 @@ author_profile: true
 <p class="country-count"><span>13</span> countries visited</p>
 
 <div class="country-pills">
-  <span class="country-pill">India</span>
+  <span class="country-pill" data-photo="/images/travels/india.jpg">India</span>
   <span class="country-pill" data-photo="/images/travels/japan.jpg">Japan</span>
   <span class="country-pill" data-photo="/images/travels/taiwan.jpg">Taiwan</span>
   <span class="country-pill" data-photo="/images/travels/philippines.jpg">Philippines</span>
-  <span class="country-pill">USA</span>
+  <span class="country-pill" data-photo="/images/travels/usa.jpg">USA</span>
   <span class="country-pill" data-photo="/images/travels/france.jpg">France</span>
   <span class="country-pill" data-photo="/images/travels/italy.jpg">Italy</span>
   <span class="country-pill" data-photo="/images/travels/germany.jpg">Germany</span>
-  <span class="country-pill">Czech Republic</span>
+  <span class="country-pill" data-photo="/images/travels/czech.jpg">Czech Republic</span>
   <span class="country-pill" data-photo="/images/travels/netherlands.jpg">Netherlands</span>
   <span class="country-pill" data-photo="/images/travels/austria.jpg">Austria</span>
   <span class="country-pill">Vietnam</span>

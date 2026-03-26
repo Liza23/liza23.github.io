@@ -69,6 +69,14 @@
       .then(function (world) {
         var countries = topojson.feature(world, world.objects.countries);
 
+        // Pre-compute projected bounding boxes for each feature so we can
+        // quickly reject dots that can't possibly be inside a country.
+        var features = countries.features;
+        var boxes = features.map(function(f) {
+          var b = geoPath.bounds(f);
+          return { minX: b[0][0], minY: b[0][1], maxX: b[1][0], maxY: b[1][1] };
+        });
+
         var visitedDots   = [];
         var unvisitedDots = [];
 
@@ -77,8 +85,12 @@
             var coords = projection.invert([x, y]);
             if (!coords || isNaN(coords[0]) || isNaN(coords[1])) continue;
 
-            for (var i = 0; i < countries.features.length; i++) {
-              var f = countries.features[i];
+            for (var i = 0; i < features.length; i++) {
+              // Bounding box pre-filter — skip if dot is outside the box
+              var bx = boxes[i];
+              if (x < bx.minX || x > bx.maxX || y < bx.minY || y > bx.maxY) continue;
+
+              var f = features[i];
               if (d3.geoContains(f, coords)) {
                 var id = +f.id;
                 if (visitedIds[id]) {
@@ -112,7 +124,7 @@
 
         g.append('g')
           .selectAll('path')
-          .data(countries.features.filter(function (d) {
+          .data(features.filter(function (d) {
             return !!visitedIds[+d.id];
           }))
           .join('path')
