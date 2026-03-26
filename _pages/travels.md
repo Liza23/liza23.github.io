@@ -49,7 +49,7 @@ author_profile: true
   <span class="country-pill" data-photo="/images/travels/czech.jpg">Czech Republic</span>
   <span class="country-pill" data-photo="/images/travels/netherlands.jpg">Netherlands</span>
   <span class="country-pill" data-photo="/images/travels/austria.jpg">Austria</span>
-  <span class="country-pill">Vietnam</span>
+  <span class="country-pill" data-photo="/images/travels/vietnam.jpg">Vietnam</span>
   <span class="country-pill" data-photo="/images/travels/belgium.jpg">Belgium</span>
 </div>
 
