@@ -1,267 +1,222 @@
 # Bookshelf data – books are grouped by section (year or label).
 # Cover images live in /images/books/ (filenames = ISBN used when fetching).
 
-- section: "currently reading"
+- section: currently reading
   books:
-    - title: "Notes from Underground"
-      author: "Fyodor Dostoevsky"
-      note: ""
-      cover: "/images/books/notes-from-underground.jpg"
-      rating: 4.5
-
-    - title: "The Master: The Long Run and Beautiful Game of Roger Federer"
-      author: "Christopher Clarey"
-      note: ""
-      cover: "/images/books/the-master-federer.jpg"
-      rating: 4.5
-
-- section: "2026"
+  - title: Notes from Underground
+    author: Fyodor Dostoevsky
+    cover: /images/books/notes-from-underground.jpg
+  - title: 'The Master: The Long Run and Beautiful Game of Roger Federer'
+    author: Christopher Clarey
+    cover: /images/books/the-master-federer.jpg
+- section: '2026'
   books:
-    - title: "1984"
-      author: "George Orwell"
-      note: ""
-      cover: "/images/books/9780451524935.jpg"
-      rating: 5.0
-
-    - title: "A Long Winter"
-      author: "Colm Tóibín"
-      note: ""
-      cover: "/images/books/9781476785080.jpg"
-      rating: 4.0
-
-    - title: "Sweet Bean Paste"
-      author: "Durian Sukegawa"
-      note: "Finished the first 200 pages in one sitting. Realized something bad will happen to the main character and didn't read the remaining 50 pages for another month. Lovely japanese, heartwarming story."
-      cover: "/images/books/9781786071958.jpg"
-      rating: 4.5
-
-    - title: "Small Things Like These"
-      author: "Claire Keegan"
-      note: ""
-      cover: "/images/books/9780802158741.jpg"
-      rating: 4.5
-
-- section: "2025"
+  - title: '1984'
+    author: George Orwell
+    note: read the audiobook version as well, loved it, althou hated the ending
+    cover: /images/books/9780451524935.jpg
+    rating: 5
+  - title: A Long Winter
+    author: Colm Tóibín
+    note: decent story, some literary details were p good
+    cover: /images/books/9781476785080.jpg
+    rating: 3
+  - title: Sweet Bean Paste
+    author: Durian Sukegawa
+    note: lovely japanese story! the characters were super loving. 1/2 books to ever make me cry!
+    cover: /images/books/9781786071958.jpg
+    rating: 5
+  - title: Small Things Like These
+    author: Claire Keegan
+    note: very well written, such short book but covered such hidden topics
+    cover: /images/books/9780802158741.jpg
+    rating: 4.5
+- section: '2025'
   books:
-    - title: "Days at the Morisaki Bookshop"
-      author: "Satoshi Yagisawa"
-      note: ""
-      cover: "/images/books/morisaki-bookshop.jpg"
-      rating: 4.5
-
-    - title: "The Little Coffee Shop of Kabul"
-      author: "Deborah Rodriguez"
-      note: "pretty decent, second half gets interesting"
-      cover: "/images/books/9780451401878.jpg"
-      rating: 3.25
-
-    - title: "A Study in Scarlet"
-      author: "Arthur Conan Doyle"
-      note: "such a page-turner — get me a man who waits 20 years for revenge"
-      cover: "/images/books/9780140439083.jpg"
-      rating: 4.25
-
-    - title: "The Immortal Life of Henrietta Lacks"
-      author: "Rebecca Skloot"
-      note: "thoroughly researched, learnt so much about black history and science"
-      cover: "/images/books/9781400052189.jpg"
-      rating: 4.25
-
-    - title: "The Catcher in the Rye"
-      author: "J. D. Salinger"
-      note: ""
-      cover: "/images/books/9780316769488.jpg"
-      rating: 4.25
-
-    - title: "A Short History of Florence"
-      author: "Franco Cardini"
-      note: ""
-      cover: "/images/books/short-history-florence.jpg"
-      rating: 4.5
-
-    - title: "The Prague Golem: Jewish Stories of the Ghetto"
-      author: "Soňa Marešová"
-      note: ""
-      cover: "/images/books/prague-golem.jpg"
-      rating: 4.5
-
-- section: "2024"
+  - title: Days at the Morisaki Bookshop
+    author: Satoshi Yagisawa
+    note: warm read, althou did love the story that much
+    cover: /images/books/morisaki-bookshop.jpg
+    rating: 3
+  - title: The Little Coffee Shop of Kabul
+    author: Deborah Rodriguez
+    note: reminded me 1000 splendid suns
+    cover: /images/books/9780451401878.jpg
+    rating: 3.5
+  - title: A Study in Scarlet
+    author: Arthur Conan Doyle
+    note: such a page-turner, get me a man who waits 20 years for revenge lmao
+    cover: /images/books/9780140439083.jpg
+    rating: 4.5
+  - title: The Immortal Life of Henrietta Lacks
+    author: Rebecca Skloot
+    note: thoroughly researched, learnt so much about black history and science
+    cover: /images/books/9781400052189.jpg
+    rating: 4
+  - title: The Catcher in the Rye
+    author: J. D. Salinger
+    note: glad that i wouldn't have to hear the word "phony" again
+    cover: /images/books/9780316769488.jpg
+    rating: 4
+  - title: A Short History of Florence
+    author: Franco Cardini
+    note: purchased in florence from a cute bookshop, loved reading about florence while walking those cobbled streets
+    cover: /images/books/short-history-florence.jpg
+    rating: 3.5
+  - title: 'The Prague Golem: Jewish Stories of the Ghetto'
+    author: Soňa Marešová
+    note: purchased in prague from a cute bookshop, was amazed to learn so much history from the tiny book
+    cover: /images/books/prague-golem.jpg
+    rating: 3.5
+- section: '2024'
   books:
-    - title: "Norwegian Wood"
-      author: "Haruki Murakami"
-      note: "Read this book on my first solo trip in Japan. Was deeply touched."
-      cover: "/images/books/9780375704024.jpg"
-      rating: 4.5
-
-    - title: "White Nights"
-      author: "Fyodor Dostoevsky"
-      note: ""
-      cover: "/images/books/51lMJWnnRDL.jpg"
-      rating: 4.5
-
-    - title: "The Art of Seduction"
-      author: "Robert Greene"
-      note: ""
-      cover: "/images/books/9780142001196.jpg"
-      rating: 4.5
-
-    - title: "The Silent Patient"
-      author: "Alex Michaelides"
-      note: ""
-      cover: "/images/books/9781250301703.jpg"
-      rating: 4.5
-
-    - title: "The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery"
-      author: "Brianna Wiest"
-      note: ""
-      cover: "/images/books/mountain-is-you.jpg"
-      rating: 4.5
-
-    - title: "The Picture of Dorian Gray"
-      author: "Oscar Wilde"
-      note: ""
-      cover: "/images/books/9780141439570.jpg"
-      rating: 4.5
-
-- section: "2023"
+  - title: Norwegian Wood
+    author: Haruki Murakami
+    note: read this book on my first solo trip in Japan. was deeply touched
+    cover: /images/books/9780375704024.jpg
+    rating: 4
+  - title: White Nights
+    author: Fyodor Dostoevsky
+    note: p decent read, excited to read more of him
+    cover: /images/books/51lMJWnnRDL.jpg
+    rating: 4
+  - title: The Art of Seduction
+    author: Robert Greene
+    note: didn't like at all, v manipulative vibes
+    cover: /images/books/9780142001196.jpg
+    rating: 2
+  - title: The Silent Patient
+    author: Alex Michaelides
+    note: 'wasn''t super impressed w the plotline (:'
+    cover: /images/books/9781250301703.jpg
+    rating: 3
+  - title: 'The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery'
+    author: Brianna Wiest
+    note: helped me exactly when i needed
+    cover: /images/books/mountain-is-you.jpg
+    rating: 3
+  - title: The Picture of Dorian Gray
+    author: Oscar Wilde
+    note: yet to find a classic to disappoint me lmao
+    cover: /images/books/9780141439570.jpg
+    rating: 4
+- section: '2023'
   books:
-    - title: "Before the Coffee Gets Cold"
-      author: "Toshikazu Kawaguchi"
-      note: ""
-      cover: "/images/books/before-coffee-gets-cold.jpg"
-      rating: 4.5
-
-    - title: "The Psychology of Money"
-      author: "Morgan Housel"
-      note: ""
-      cover: "/images/books/9780857197689.jpg"
-      rating: 4.5
-
-    - title: "The Almanack of Naval Ravikant"
-      author: "Eric Jorgenson"
-      note: ""
-      cover: "/images/books/9781544514222.jpg"
-      rating: 4.5
-
-    - title: "Doglapan: The Hard Truth about Life and Start-Ups"
-      author: "Ashneer Grover"
-      note: ""
-      cover: "/images/books/doglapan.jpg"
-      rating: 4.5
-
-    - title: "Grit: The Power of Passion and Perseverance"
-      author: "Angela Duckworth"
-      note: ""
-      cover: "/images/books/9781501111105.jpg"
-      rating: 4.5
-
-    - title: "Surrounded by Psychopaths: How to Protect Yourself from Being Manipulated and Exploited in Business (and in Life)"
-      author: "Thomas Erikson"
-      note: "Surrounded by Idiots series"
-      cover: "/images/books/surrounded-by-psychopaths.jpg"
-      rating: 4.5
-
-- section: "2022"
+  - title: Before the Coffee Gets Cold
+    author: Toshikazu Kawaguchi
+    note: wasn't a big fan of the plotline but interesting concept
+    cover: /images/books/before-coffee-gets-cold.jpg
+    rating: 3
+  - title: The Psychology of Money
+    author: Morgan Housel
+    note: 'need to read more on financial literacy and stop booking those damned trips (:'
+    cover: /images/books/9780857197689.jpg
+    rating: 4
+  - title: The Almanack of Naval Ravikant
+    author: Eric Jorgenson
+    note: overhyped acc to me
+    cover: /images/books/9781544514222.jpg
+    rating: 3
+  - title: 'Doglapan: The Hard Truth about Life and Start-Ups'
+    author: Ashneer Grover
+    note: do not like this person
+    cover: /images/books/doglapan.jpg
+    rating: 2
+  - title: 'Grit: The Power of Passion and Perseverance'
+    author: Angela Duckworth
+    note: decent self-help
+    cover: /images/books/9781501111105.jpg
+    rating: 3
+  - title: 'Surrounded by Psychopaths: How to Protect Yourself from Being Manipulated and Exploited in Business (and in Life)'
+    author: Thomas Erikson
+    note: interesting facts about human psychology
+    cover: /images/books/surrounded-by-psychopaths.jpg
+    rating: 3
+- section: '2022'
   books:
-    - title: "A Thousand Splendid Suns"
-      author: "Khaled Hosseini"
-      note: "the book that made me cry"
-      cover: "/images/books/9781594481857.jpg"
-      rating: 5.0
-
-    - title: "Anxious People"
-      author: "Fredrik Backman"
-      note: "tragic, funny, witty — it is about real love"
-      cover: "/images/books/9781501160837.jpg"
-      rating: 5.0
-
-    - title: "The Courage to Be Disliked"
-      author: "Ichiro Kishimi & Fumitake Koga"
-      note: "hard-to-swallow truths, must-read"
-      cover: "/images/books/9781501197277.jpg"
-      rating: 4.5
-
-    - title: "The Sleep Solution"
-      author: "W. Chris Winter, MD"
-      note: "witty, informative — science of why we sleep"
-      cover: "/images/books/9780399583612.jpg"
-      rating: 4.0
-
-    - title: "Leaders Eat Last"
-      author: "Simon Sinek"
-      note: "a useful leadership guide for beginners"
-      cover: "/images/books/9781591845324.jpg"
-      rating: 4.0
-
-    - title: "The Midnight Library"
-      author: "Matt Haig"
-      note: "grass isn't always greener on the other side"
-      cover: "/images/books/9780525559474.jpg"
-      rating: 3.5
-
-- section: "2021"
+  - title: A Thousand Splendid Suns
+    author: Khaled Hosseini
+    note: the first book that ever made me cry, i would never forget staying up all night
+    cover: /images/books/9781594481857.jpg
+    rating: 5
+  - title: Anxious People
+    author: Fredrik Backman
+    note: tragic, funny, witty! loved it
+    cover: /images/books/9781501160837.jpg
+    rating: 4.5
+  - title: The Courage to Be Disliked
+    author: Ichiro Kishimi & Fumitake Koga
+    note: hard-to-swallow truths, must-read
+    cover: /images/books/9781501197277.jpg
+    rating: 4
+  - title: The Sleep Solution
+    author: W. Chris Winter, MD
+    note: loved how he made a science book witty :)
+    cover: /images/books/9780399583612.jpg
+    rating: 4
+  - title: Leaders Eat Last
+    author: Simon Sinek
+    note: p useful and decent read
+    cover: /images/books/9781591845324.jpg
+    rating: 3.5
+  - title: The Midnight Library
+    author: Matt Haig
+    note: parallel lives and what we could have been
+    cover: /images/books/9780525559474.jpg
+    rating: 3
+- section: '2021'
   books:
-    - title: "Ikigai: The Japanese Secret to a Long and Happy Life"
-      author: "Héctor García & Francesc Miralles"
-      note: ""
-      cover: "/images/books/9780143130727.jpg"
-      rating: 4.5
-
-    - title: "Tuesdays with Morrie"
-      author: "Mitch Albom"
-      note: ""
-      cover: "/images/books/9780767905923.jpg"
-      rating: 4.5
-
-    - title: "And Then There Were None"
-      author: "Agatha Christie"
-      note: "iconic 1939 mystery"
-      cover: "/images/books/9780062073488.jpg"
-      rating: 4.5
-
-    - title: "The Man Who Mistook His Wife for a Hat"
-      author: "Oliver Sacks"
-      note: ""
-      cover: "/images/books/9780684853949.jpg"
-      rating: 4.5
-
-- section: "2020"
+  - title: 'Ikigai: The Japanese Secret to a Long and Happy Life'
+    author: Héctor García & Francesc Miralles
+    note: overhyped
+    cover: /images/books/9780143130727.jpg
+    rating: 3
+  - title: Tuesdays with Morrie
+    author: Mitch Albom
+    note: gives this warm feeling of listening to your grandpa
+    cover: /images/books/9780767905923.jpg
+    rating: 4
+  - title: And Then There Were None
+    author: Agatha Christie
+    note: iconic, love agtha no matter what :)
+    cover: /images/books/9780062073488.jpg
+    rating: 4
+  - title: The Man Who Mistook His Wife for a Hat
+    author: Oliver Sacks
+    note: really good read
+    cover: /images/books/9780684853949.jpg
+    rating: 4
+- section: '2020'
   books:
-    - title: "The Subtle Art of Not Giving a F*ck"
-      author: "Mark Manson"
-      note: ""
-      cover: "/images/books/9780062457714.jpg"
-      rating: 4.5
-
-    - title: "Shoe Dog"
-      author: "Phil Knight"
-      note: ""
-      cover: "/images/books/9781501135927.jpg"
-      rating: 4.5
-
-    - title: "How to Win Friends and Influence People"
-      author: "Dale Carnegie"
-      note: ""
-      cover: "/images/books/9780671027032.jpg"
-      rating: 4.5
-
-    - title: "Dream with Your Eyes Open: An Entrepreneurial Journey"
-      author: "Ronnie Screwvala"
-      note: ""
-      cover: "/images/books/dream-with-your-eyes-open.jpg"
-      rating: 4.5
-
-    - title: "The Da Vinci Code"
-      author: "Dan Brown"
-      note: ""
-      cover: "/images/books/9780385504218.jpg"
-      rating: 4.5
-
-    - title: "The Bell Jar"
-      author: "Sylvia Plath"
-      note: ""
-      cover: "/images/books/9780060837020.jpg"
-      rating: 4.5
-
-- section: "abandoned"
+  - title: The Subtle Art of Not Giving a F*ck
+    author: Mark Manson
+    note: p decent for one time read
+    cover: /images/books/9780062457714.jpg
+    rating: 4
+  - title: Shoe Dog
+    author: Phil Knight
+    note: would always love this :)
+    cover: /images/books/9781501135927.jpg
+    rating: 4.5
+  - title: How to Win Friends and Influence People
+    author: Dale Carnegie
+    note: why did i read it
+    cover: /images/books/9780671027032.jpg
+    rating: 2.5
+  - title: 'Dream with Your Eyes Open: An Entrepreneurial Journey'
+    author: Ronnie Screwvala
+    note: well-written
+    cover: /images/books/dream-with-your-eyes-open.jpg
+    rating: 3.5
+  - title: The Da Vinci Code
+    author: Dan Brown
+    note: loved it, not a fan of mysteries but amazing read
+    cover: /images/books/9780385504218.jpg
+    rating: 4
+  - title: The Bell Jar
+    author: Sylvia Plath
+    note: fav author
+    cover: /images/books/9780060837020.jpg
+    rating: 5
+- section: abandoned
   books: []
