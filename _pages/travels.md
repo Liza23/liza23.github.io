@@ -56,6 +56,7 @@ author_profile: true
   <div class="map-zoom-controls">
     <button class="map-zoom-btn" id="zoom-out" title="Zoom out">&minus;</button>
     <button class="map-zoom-btn" id="zoom-in" title="Zoom in">+</button>
+    <button class="map-zoom-btn" id="route-replay" title="Replay route" style="display:none;margin-left:8px;font-size:.7rem;">&#9654;</button>
   </div>
   <div class="map-legend">
     <div class="legend-item"><div class="legend-dot visited"></div><span>visited</span></div>
