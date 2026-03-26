@@ -1,14 +1,161 @@
 ---
 layout: archive
-title: "Labs"
-permalink: /labs/
+title: "Glimpse"
+permalink: /portfolio/
 author_profile: true
 ---
 
-{% include base_path %}
+<style>
+.dot-portrait-container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+.dot-portrait-container canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #d4d3cb;
+}
+.dot-loading {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .72rem;
+  color: #a3a39f;
+  text-align: center;
+  padding: 2em 0;
+}
+</style>
 
+<div class="dot-portrait-container">
+  <div class="dot-loading" id="dot-loading">assembling dots...</div>
+  <canvas id="dot-canvas" style="display:none;"></canvas>
+</div>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<script>
+(function() {
+  var canvas = document.getElementById('dot-canvas');
+  var ctx = canvas.getContext('2d');
+  var loading = document.getElementById('dot-loading');
+  var img = new Image();
+  img.crossOrigin = 'anonymous';
 
+  var DOT_SPACING = 4;
+  var DOT_RADIUS = 1.8;
+  var SCATTER_RANGE = 500;
+  var EASE = 0.04;
+  var DAMPING = 0.87;
+  var SETTLE_THRESHOLD = 0.25;
+
+  img.onload = function() {
+    var w = img.width;
+    var h = img.height;
+    var maxW = 720;
+    var scale = Math.min(1, maxW / w);
+    var cw = Math.floor(w * scale);
+    var ch = Math.floor(h * scale);
+
+    canvas.width = cw;
+    canvas.height = ch;
+    canvas.style.display = 'block';
+    loading.style.display = 'none';
+
+    var offscreen = document.createElement('canvas');
+    offscreen.width = cw;
+    offscreen.height = ch;
+    var oc = offscreen.getContext('2d');
+    oc.drawImage(img, 0, 0, cw, ch);
+    var imageData = oc.getImageData(0, 0, cw, ch);
+    var data = imageData.data;
+
+    var particles = [];
+    for (var y = 0; y < ch; y += DOT_SPACING) {
+      for (var x = 0; x < cw; x += DOT_SPACING) {
+        var idx = (y * cw + x) * 4;
+        var r = data[idx];
+        var g = data[idx + 1];
+        var b = data[idx + 2];
+        var a = data[idx + 3];
+        if (a < 30) continue;
+
+        var angle = Math.random() * Math.PI * 2;
+        var dist = SCATTER_RANGE + Math.random() * SCATTER_RANGE;
+        particles.push({
+          x: x + Math.cos(angle) * dist,
+          y: y + Math.sin(angle) * dist,
+          tx: x,
+          ty: y,
+          vx: 0,
+          vy: 0,
+          r: r, g: g, b: b, a: a,
+          delay: Math.random() * 40
+        });
+      }
+    }
+
+    var frame = 0;
+    var settled = false;
+
+    function animate() {
+      ctx.clearRect(0, 0, cw, ch);
+      var allSettled = true;
+      frame++;
+
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        if (frame < p.delay) {
+          allSettled = false;
+          ctx.fillStyle = 'rgba(' + p.r + ',' + p.g + ',' + p.b + ',0.15)';
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, DOT_RADIUS * 0.6, 0, Math.PI * 2);
+          ctx.fill();
+          continue;
+        }
+
+        var dx = p.tx - p.x;
+        var dy = p.ty - p.y;
+        p.vx += dx * EASE;
+        p.vy += dy * EASE;
+        p.vx *= DAMPING;
+        p.vy *= DAMPING;
+        p.x += p.vx;
+        p.y += p.vy;
+
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > SETTLE_THRESHOLD) allSettled = false;
+
+        var alpha = settled ? (p.a / 255) : Math.min(p.a / 255, 0.2 + (1 - dist / SCATTER_RANGE) * 0.8);
+        ctx.fillStyle = 'rgba(' + p.r + ',' + p.g + ',' + p.b + ',' + alpha.toFixed(3) + ')';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, DOT_RADIUS, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      if (allSettled && !settled) {
+        settled = true;
+        for (var j = 0; j < particles.length; j++) {
+          particles[j].x = particles[j].tx;
+          particles[j].y = particles[j].ty;
+        }
+      }
+
+      if (!settled) {
+        requestAnimationFrame(animate);
+      } else {
+        ctx.clearRect(0, 0, cw, ch);
+        for (var k = 0; k < particles.length; k++) {
+          var q = particles[k];
+          ctx.fillStyle = 'rgba(' + q.r + ',' + q.g + ',' + q.b + ',' + (q.a / 255).toFixed(3) + ')';
+          ctx.beginPath();
+          ctx.arc(q.tx, q.ty, DOT_RADIUS, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+    }
+
+    animate();
+  };
+
+  img.src = '/images/website_summary.png';
+})();
+</script>

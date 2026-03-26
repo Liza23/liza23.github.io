@@ -157,6 +157,10 @@ a:hover {
   border-radius: 0 !important;
   box-shadow: none !important;
   padding: 0 !important;
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 90px !important;
+  }
 }
 
 .author__avatar {
