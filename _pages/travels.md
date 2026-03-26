@@ -33,9 +33,7 @@ author_profile: true
 .map-tooltip{position:fixed;background:#111110;color:#f9f9f7;font-family:'IBM Plex Mono',monospace;font-size:.72rem;padding:.35em .8em;pointer-events:none;white-space:nowrap;z-index:9999;opacity:0;transition:opacity .1s ease;letter-spacing:.02em;border-radius:2px}
 </style>
 
-<p class="travel-intro">Thirteen countries across Asia and Europe — and counting.</p>
-
-<p class="country-count"><span>13</span> countries visited</p>
+<p class="travel-intro">exploring the world, one country at a time</p>
 
 <div class="country-pills">
   <span class="country-pill" data-photo="/images/travels/india.jpg">India</span>
