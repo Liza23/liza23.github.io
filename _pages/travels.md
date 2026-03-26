@@ -12,6 +12,11 @@ author_profile: true
 .country-pills{display:flex;flex-wrap:wrap;gap:.45em;margin-bottom:1.4em}
 .country-pill{display:inline-block;padding:.2em .75em;background:transparent;color:#111110;border:1px solid #111110;font-family:'IBM Plex Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:.02em;cursor:default;transition:background .15s ease,color .15s ease}
 .country-pill:hover{background:#111110;color:#f9f9f7}
+.country-pill[data-photo]{cursor:pointer}
+.country-lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);z-index:9999;display:none;align-items:center;justify-content:center;cursor:pointer}
+.country-lightbox.visible{display:flex}
+.country-lightbox img{max-width:88vw;max-height:85vh;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,.4);object-fit:contain}
+.country-lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:rgba(255,255,255,.8);letter-spacing:.02em}
 #travel-map-container{position:relative;width:100%;background:#ffffff;margin-bottom:1.4em;overflow:hidden}
 #travel-map svg{width:100%;height:auto;display:block;cursor:grab}
 #travel-map svg:active{cursor:grabbing}
@@ -34,18 +39,18 @@ author_profile: true
 
 <div class="country-pills">
   <span class="country-pill">India</span>
-  <span class="country-pill">Japan</span>
-  <span class="country-pill">Taiwan</span>
-  <span class="country-pill">Philippines</span>
+  <span class="country-pill" data-photo="/images/travels/japan.png">Japan</span>
+  <span class="country-pill" data-photo="/images/travels/taiwan.png">Taiwan</span>
+  <span class="country-pill" data-photo="/images/travels/philippines.png">Philippines</span>
   <span class="country-pill">USA</span>
-  <span class="country-pill">France</span>
-  <span class="country-pill">Italy</span>
-  <span class="country-pill">Germany</span>
+  <span class="country-pill" data-photo="/images/travels/france.png">France</span>
+  <span class="country-pill" data-photo="/images/travels/italy.png">Italy</span>
+  <span class="country-pill" data-photo="/images/travels/germany.png">Germany</span>
   <span class="country-pill">Czech Republic</span>
-  <span class="country-pill">Netherlands</span>
-  <span class="country-pill">Austria</span>
+  <span class="country-pill" data-photo="/images/travels/netherlands.png">Netherlands</span>
+  <span class="country-pill" data-photo="/images/travels/austria.png">Austria</span>
   <span class="country-pill">Vietnam</span>
-  <span class="country-pill">Belgium</span>
+  <span class="country-pill" data-photo="/images/travels/belgium.png">Belgium</span>
 </div>
 
 <div id="travel-map-container">
@@ -61,6 +66,32 @@ author_profile: true
 </div>
 
 <div class="map-tooltip" id="map-tooltip"></div>
+
+<div class="country-lightbox" id="country-lightbox">
+  <img id="country-lightbox-img" src="" alt="">
+  <div class="country-lightbox-caption" id="country-lightbox-caption"></div>
+</div>
+
+<script>
+(function() {
+  var lightbox = document.getElementById('country-lightbox');
+  var lbImg = document.getElementById('country-lightbox-img');
+  var lbCaption = document.getElementById('country-lightbox-caption');
+
+  document.querySelectorAll('.country-pill[data-photo]').forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      lbImg.src = pill.getAttribute('data-photo');
+      lbCaption.textContent = pill.textContent;
+      lightbox.classList.add('visible');
+    });
+  });
+
+  lightbox.addEventListener('click', function() {
+    lightbox.classList.remove('visible');
+    lbImg.src = '';
+  });
+})();
+</script>
 
 <script src="/assets/js/d3.v7.min.js"></script>
 <script src="/assets/js/topojson-client.min.js"></script>
