@@ -59,9 +59,8 @@ author_profile: true
   border-radius: 4px;
   box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
   min-width: 144px;
-  max-height: 420px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: 204px;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -92,6 +91,8 @@ author_profile: true
   max-width: 160px;
   padding-top: 4px;
   flex: 1;
+  max-height: 180px;
+  overflow-y: auto;
 }
 .book-review-title {
   font-size: .72rem;
@@ -159,6 +160,7 @@ author_profile: true
   }
   .book-card-inner {
     min-width: 120px;
+    height: 160px;
     padding: 8px;
     gap: 8px;
   }
@@ -169,11 +171,11 @@ author_profile: true
   .book-review {
     min-width: 100px;
     max-width: 130px;
+    max-height: 144px;
   }
 }
 </style>
 
-<p class="bookshelf-intro">do you ever read something and feel nostalgic about a place you have never been to?</p>
 <p class="bookshelf-intro">reading a million books and living a million different lives</p>
 
 {% for section in site.data.bookshelf %}
