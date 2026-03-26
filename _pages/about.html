@@ -38,6 +38,37 @@ redirect_from:
   margin-top: 1.6em;
 }
 
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4em;
+  margin-top: 2.2em;
+  padding: 1.4em 0;
+  border-top: 1px solid #d4d3cb;
+}
+.logo-row img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.55;
+  transition: opacity .15s ease, filter .15s ease;
+  border: none;
+}
+.logo-row img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  .logo-row {
+    gap: 1.4em;
+  }
+  .logo-row img {
+    height: 30px;
+  }
+}
+
 .particle-hero {
   position: relative;
   width: 100%;
@@ -71,7 +102,13 @@ redirect_from:
 
 <p>I keep my DMs open for curious conversations, good collaborations and building ideas!</p>
 
-<img src="../images/website_summary.png" alt="a recap of my colorful life so far" title="a recap of my colorful life so far">
+<div class="logo-row">
+  <img src="/images/logos/cmu.png" alt="Carnegie Mellon University">
+  <img src="/images/logos/honda.png" alt="Honda RnD">
+  <img src="/images/logos/adobe.png" alt="Adobe Research">
+  <img src="/images/logos/iitb.png" alt="IIT Bombay">
+  <img src="/images/logos/ntu.png" alt="NTU">
+</div>
 </div>
 
 <script>

@@ -1,7 +1,7 @@
 ---
 title: "LiveStreaming AI: Merchandisable Moment Identification and Offer Generation"
 collection: publications
-category: conferences
+category: patents
 excerpt: "A patent application on identifying merchandisable moments in livestreams and generating offers."
 date: 2023-01-01
 authors: "KJ Sunav Choudhary, Atanu R. Sinha, Sarthak Chakraborty, Sai Shashank, et al."
