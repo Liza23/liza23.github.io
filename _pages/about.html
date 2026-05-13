@@ -89,19 +89,16 @@ redirect_from:
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
-  font-family: 'IBM Plex Mono', 'JetBrains Mono', Monaco, monospace;
+  gap: 0.5em;
 }
 .visitor-greeting {
-  font-size: .75rem;
-  color: #555553;
-  letter-spacing: 0.01em;
+  font-family: 'IBM Plex Mono', 'JetBrains Mono', Monaco, monospace;
+  font-size: .8rem;
+  color: #111110;
   margin: 0;
 }
 #cobe-globe {
-  width: 180px;
-  height: 180px;
-  opacity: 0.88;
+  display: block;
 }
 </style>
 
@@ -134,8 +131,8 @@ redirect_from:
 </div>
 
 <div class="visitor-section">
-  <p class="visitor-greeting" id="visitor-greeting">locating you…</p>
-  <canvas id="cobe-globe" width="360" height="360"></canvas>
+  <p class="visitor-greeting">hello global visitor</p>
+  <canvas id="cobe-globe"></canvas>
 </div>
 
 <script>
@@ -273,54 +270,35 @@ redirect_from:
 })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/cobe@0.6.3/dist/cobe.umd.js"></script>
-<script>
-(function() {
-  var markerLat = 0, markerLng = 0, hasMarker = false;
-  var greeting = document.getElementById('visitor-greeting');
+<script type="module">
+import createGlobe from 'https://esm.sh/cobe@0.6.3';
 
-  fetch('https://ipapi.co/json/')
-    .then(function(r) { return r.json(); })
-    .then(function(d) {
-      var parts = [];
-      if (d.city) parts.push(d.city);
-      if (d.country_name) parts.push(d.country_name);
-      greeting.textContent = parts.length
-        ? 'hi there from ' + parts.join(', ') + '!'
-        : 'hi there, mystery visitor!';
-      if (d.latitude && d.longitude) {
-        markerLat = d.latitude;
-        markerLng = d.longitude;
-        hasMarker = true;
-      }
-    })
-    .catch(function() {
-      greeting.textContent = 'hi there, mystery visitor!';
-    });
+var canvas = document.getElementById('cobe-globe');
+var dpr = Math.min(window.devicePixelRatio || 1, 2);
+var size = 240;
+canvas.width = size * dpr;
+canvas.height = size * dpr;
+canvas.style.width = size + 'px';
+canvas.style.height = size + 'px';
 
-  var canvas = document.getElementById('cobe-globe');
-  var phi = 0;
-  var globe = createGlobe(canvas, {
-    devicePixelRatio: window.devicePixelRatio || 1,
-    width: 360,
-    height: 360,
-    phi: 0,
-    theta: 0.2,
-    dark: 0,
-    diffuse: 1.1,
-    mapSamples: 12000,
-    mapBrightness: 5,
-    baseColor: [0.92, 0.92, 0.9],
-    markerColor: [0.07, 0.07, 0.06],
-    glowColor: [0.92, 0.92, 0.9],
-    markers: [],
-    onRender: function(state) {
-      if (hasMarker) {
-        state.markers = [{ location: [markerLat, markerLng], size: 0.08 }];
-      }
-      state.phi = phi;
-      phi += 0.004;
-    }
-  });
-})();
+var phi = 0;
+createGlobe(canvas, {
+  devicePixelRatio: dpr,
+  width: size * dpr,
+  height: size * dpr,
+  phi: 0,
+  theta: 0.2,
+  dark: 0,
+  diffuse: 1.8,
+  mapSamples: 16000,
+  mapBrightness: 12,
+  baseColor: [0.97, 0.97, 0.96],
+  markerColor: [0.07, 0.07, 0.06],
+  glowColor: [0.97, 0.97, 0.96],
+  markers: [],
+  onRender: function(state) {
+    state.phi = phi;
+    phi += 0.004;
+  }
+});
 </script>
