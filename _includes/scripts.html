@@ -5,60 +5,53 @@
 <script type="module">
 import createGlobe from 'https://esm.sh/cobe@0.6.3';
 
-var canvas = document.getElementById('cobe-globe');
-if (!canvas) { throw new Error('no globe'); }
+(function() {
+  var canvas = document.getElementById('cobe-globe');
+  if (!canvas) return;
 
-var dpr = Math.min(window.devicePixelRatio || 1, 2);
-var size = 160;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
-canvas.style.width = size + 'px';
-canvas.style.height = size + 'px';
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var size = 160;
+  canvas.width = size * dpr;
+  canvas.height = size * dpr;
+  canvas.style.width = size + 'px';
+  canvas.style.height = size + 'px';
 
-var markers = [];
-var phi = 0;
+  var markers = [];
+  var phi = 0;
 
-createGlobe(canvas, {
-  devicePixelRatio: dpr,
-  width: size * dpr,
-  height: size * dpr,
-  phi: 0,
-  theta: 0.3,
-  dark: 1,
-  diffuse: 1.2,
-  mapSamples: 16000,
-  mapBrightness: 6,
-  baseColor: [0.3, 0.3, 0.3],
-  markerColor: [1, 1, 1],
-  glowColor: [0.12, 0.12, 0.11],
-  markers: [],
-  onRender: function(state) {
-    state.markers = markers;
-    state.phi = phi;
-    phi += 0.004;
-  }
-});
-
-var statsEl = document.getElementById('globe-stats');
-
-// Increment visit counter (free, no setup needed)
-fetch('https://api.counterapi.dev/v1/pandaliza-github-io/visits/up')
-  .then(function(r) { return r.json(); })
-  .then(function(d) {
-    if (statsEl && d.count) statsEl.textContent = d.count + ' visits';
-  })
-  .catch(function() {});
-
-// Get current visitor location and show as marker
-fetch('https://ipapi.co/json/')
-  .then(function(r) { return r.json(); })
-  .then(function(geo) {
-    if (!geo.latitude || !geo.longitude) return;
-    markers = [{ location: [geo.latitude, geo.longitude], size: 0.08 }];
-    if (statsEl && geo.city && geo.country_name) {
-      var current = statsEl.textContent;
-      statsEl.textContent = (current ? current + ' · ' : '') + geo.city + ', ' + geo.country_name;
+  createGlobe(canvas, {
+    devicePixelRatio: dpr,
+    width: size * dpr,
+    height: size * dpr,
+    phi: 0,
+    theta: 0.3,
+    dark: 1,
+    diffuse: 0.5,
+    mapSamples: 16000,
+    mapBrightness: 10,
+    baseColor: [0.55, 0.55, 0.55],
+    markerColor: [1, 1, 1],
+    glowColor: [0.25, 0.25, 0.23],
+    markers: [],
+    onRender: function(state) {
+      state.markers = markers;
+      state.phi = phi;
+      phi += 0.004;
     }
-  })
-  .catch(function() {});
+  });
+
+  var statsEl = document.getElementById('globe-stats');
+
+  // Get current visitor location
+  fetch('https://ipapi.co/json/')
+    .then(function(r) { return r.json(); })
+    .then(function(geo) {
+      if (!geo.latitude || !geo.longitude) return;
+      markers = [{ location: [geo.latitude, geo.longitude], size: 0.08 }];
+      if (statsEl && geo.city) {
+        statsEl.textContent = geo.city + ', ' + (geo.country || geo.country_name || '');
+      }
+    })
+    .catch(function() {});
+})();
 </script>
