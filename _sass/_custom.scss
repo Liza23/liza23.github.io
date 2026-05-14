@@ -728,38 +728,3 @@ hr {
   }
 }
 
-/* ─── Sidebar Globe ──────────────────────────────────────────────────────── */
-.author__globe-card {
-  margin-top: 1em;
-  background: #111110;
-  border-radius: 8px;
-  padding: 0.8em 0.8em 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2em;
-}
-
-.author__globe-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.3em;
-}
-
-.author__globe-label {
-  font-family: var(--mono) !important;
-  font-size: 0.6rem !important;
-  color: #888885;
-  letter-spacing: 0.02em;
-  margin: 0;
-}
-
-.author__globe-stats {
-  font-family: var(--mono) !important;
-  font-size: 0.6rem;
-  color: #555553;
-}
-
-#cobe-globe { display: block; }
