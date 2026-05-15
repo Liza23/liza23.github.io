@@ -97,7 +97,7 @@
       "name": "Dhruv Shah",
       "url": "https://robodhruv.github.io/",
       "bio": "Asst. Professor @ Princeton Robotics & Research Scientist @ Google DeepMind. Autonomous robots through ML.",
-      "avatar": "https://prism.robo.princeton.edu/assets/DhruvShah25.jpg"
+      "avatar": "https://robodhruv.github.io/assets/DhruvShah25.jpg"
     },
     {
       "id": "vipul-ramtekkar",
@@ -140,6 +140,7 @@
     { "source": "pranav-deo",      "target": "liza" },
     { "source": "pranav-deo",      "target": "vipul-ramtekkar" },
     { "source": "pranav-thakkar",  "target": "vipul-ramtekkar" },
+    { "source": "pranav-thakkar",  "target": "pranav-deo" },
     { "source": "dhruv-shah",      "target": "vipul-ramtekkar" },
     { "source": "vipul-ramtekkar", "target": "liza" },
     { "source": "richeek-das",    "target": "liza" },

@@ -43,23 +43,6 @@ author_profile: true
 
 <p class="travel-intro">exploring the world, one country at a time</p>
 
-<div id="travel-map-container">
-  <div id="travel-map"><div class="map-loading">building dot map...</div></div>
-  <div class="map-zoom-controls">
-    <button class="map-zoom-btn" id="zoom-out" title="Zoom out">&minus;</button>
-    <button class="map-zoom-btn" id="zoom-in" title="Zoom in">+</button>
-    <button class="map-zoom-btn" id="route-replay" title="Replay route" style="display:none;margin-left:8px;font-size:.7rem;">&#9654;</button>
-  </div>
-  <div class="map-legend">
-    <div class="legend-item"><div class="legend-dot visited"></div><span>visited</span></div>
-    <div class="legend-item"><div class="legend-dot unvisited"></div><span>not yet</span></div>
-  </div>
-</div>
-
-<div class="map-tooltip" id="map-tooltip"></div>
-
-<p style="font-family:'IBM Plex Mono','JetBrains Mono',Monaco,monospace;font-size:.8rem;line-height:1.85;margin-bottom:1.8em;color:#111110">I have travelled to 13ish countries (out of which 10 solo :)) — I love love travel — taking unknown trains, walking unknown streets, observing people do their mundane activities, (ADHD brain) imagining living in the city, visiting local cafes, talking to strangers (and oversharing :)), staying in dorms, meeting people who've had completely different lives until now, yet, somehow, you ended up in the same location as them (many beautiful tangents)! truest believer of "we are of all the people we've met so far!"</p>
-
 <div class="travel-regions">
 
   <div class="travel-region">
@@ -94,6 +77,23 @@ author_profile: true
   </div>
 
 </div>
+
+<div id="travel-map-container">
+  <div id="travel-map"><div class="map-loading">building dot map...</div></div>
+  <div class="map-zoom-controls">
+    <button class="map-zoom-btn" id="zoom-out" title="Zoom out">&minus;</button>
+    <button class="map-zoom-btn" id="zoom-in" title="Zoom in">+</button>
+    <button class="map-zoom-btn" id="route-replay" title="Replay route" style="display:none;margin-left:8px;font-size:.7rem;">&#9654;</button>
+  </div>
+  <div class="map-legend">
+    <div class="legend-item"><div class="legend-dot visited"></div><span>visited</span></div>
+    <div class="legend-item"><div class="legend-dot unvisited"></div><span>not yet</span></div>
+  </div>
+</div>
+
+<div class="map-tooltip" id="map-tooltip"></div>
+
+<p style="font-family:'IBM Plex Mono','JetBrains Mono',Monaco,monospace;font-size:.8rem;line-height:1.85;margin-bottom:1.8em;color:#111110">I have travelled to 13ish countries (out of which 10 solo :)) — I love love travel — taking unknown trains, walking unknown streets, observing people do their mundane activities, (ADHD brain) imagining living in the city, visiting local cafes, talking to strangers (and oversharing :)), staying in dorms, meeting people who've had completely different lives until now, yet, somehow, you ended up in the same location as them (many beautiful tangents)! truest believer of "we are of all the people we've met so far!"</p>
 
 <div class="country-lightbox" id="country-lightbox">
   <img id="country-lightbox-img" src="" alt="">
