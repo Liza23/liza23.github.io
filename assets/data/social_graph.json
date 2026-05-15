@@ -4,7 +4,7 @@
       "id": "liza",
       "name": "Liza Dahiya",
       "url": "https://pandaliza.github.io",
-      "bio": "Researcher @ CMU / Honda R&D. Robots, maps, and chai.",
+      "bio": "Researcher @ CMU, Honda R&D, IITB. VLAs, Diffusion, Dexterous manipulation.",
       "avatar": "https://pandaliza.github.io/images/profile.jpg",
       "isOwner": true
     },
@@ -41,6 +41,12 @@
     { "source": "naman-kumar",   "target": "liza" },
     { "source": "vishal-reddy",  "target": "liza" },
     { "source": "kartik-sharma", "target": "liza" },
-    { "source": "kshitiz",       "target": "liza" }
+    { "source": "kshitiz",       "target": "liza" },
+    { "source": "naman-kumar",   "target": "vishal-reddy" },
+    { "source": "naman-kumar",   "target": "kartik-sharma" },
+    { "source": "naman-kumar",   "target": "kshitiz" },
+    { "source": "vishal-reddy",  "target": "kartik-sharma" },
+    { "source": "vishal-reddy",  "target": "kshitiz" },
+    { "source": "kartik-sharma", "target": "kshitiz" }
   ]
 }
