@@ -27,7 +27,12 @@ author_profile: true
 .region-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6b6b68;border-bottom:1px solid #d4d3cb;padding-bottom:.3em;margin-bottom:.8em}
 .country-list{display:flex;flex-wrap:wrap;gap:.75em}
 .country-entry{display:flex;align-items:center;gap:.55em;border:1px solid #d4d3cb;padding:.3em .55em .3em .35em;background:#fff;transition:border-color .15s ease}
+.country-entry{cursor:pointer}
 .country-entry:hover{border-color:#111110}
+.country-lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.78);z-index:9999;display:none;align-items:center;justify-content:center;cursor:pointer}
+.country-lightbox.visible{display:flex}
+.country-lightbox img{max-width:88vw;max-height:85vh;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.country-lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:rgba(255,255,255,.8);letter-spacing:.02em;white-space:nowrap}
 .country-entry img{width:52px;height:36px;object-fit:cover;display:block;flex-shrink:0}
 .country-entry span{font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:500;color:#111110;white-space:nowrap;letter-spacing:.01em}
 @media(max-width:600px){
@@ -89,6 +94,39 @@ author_profile: true
   </div>
 
 </div>
+
+<div class="country-lightbox" id="country-lightbox">
+  <img id="country-lightbox-img" src="" alt="">
+  <div class="country-lightbox-caption" id="country-lightbox-caption"></div>
+</div>
+
+<script>
+(function() {
+  var lightbox = document.getElementById('country-lightbox');
+  var lbImg    = document.getElementById('country-lightbox-img');
+  var lbCap    = document.getElementById('country-lightbox-caption');
+
+  document.querySelectorAll('.country-entry').forEach(function(entry) {
+    entry.addEventListener('click', function() {
+      var img = entry.querySelector('img');
+      var name = entry.querySelector('span').textContent;
+      lbImg.src = img.src;
+      lbImg.alt = name;
+      lbCap.textContent = name;
+      lightbox.classList.add('visible');
+    });
+  });
+
+  lightbox.addEventListener('click', function() {
+    lightbox.classList.remove('visible');
+    lbImg.src = '';
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { lightbox.classList.remove('visible'); lbImg.src = ''; }
+  });
+})();
+</script>
 
 <script src="/assets/js/d3.v7.min.js"></script>
 <script src="/assets/js/topojson-client.min.js"></script>
