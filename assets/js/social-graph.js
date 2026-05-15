@@ -13,8 +13,8 @@
   var LINK_HL      = '#111110';
 
   var isMobile = window.innerWidth < 600;
-  var W = isMobile ? 500 : 900;
-  var H = isMobile ? 380 : 520;
+  var W = isMobile ? 600 : 1300;
+  var H = isMobile ? 450 : 720;
   var oR = isMobile ? 18 : OWNER_R;
   var nR = isMobile ? 11 : NODE_R;
 
@@ -94,7 +94,7 @@
         .id(function (d) { return d.id; })
         .distance(function (d) {
           var ownerInvolved = d.source.isOwner || d.target.isOwner;
-          return ownerInvolved ? 110 : 75;
+          return ownerInvolved ? 180 : 110;
         })
         .strength(0.6))
       .force('charge', d3.forceManyBody()
@@ -104,7 +104,7 @@
         .radius(function (d) { return (d.isOwner ? oR : nR) + 10; }))
       .force('radial', d3.forceRadial(function (d) {
         if (d.isOwner) return 0;
-        return d._degree === 1 ? 130 : 220;
+        return d._degree === 1 ? 200 : 360;
       }, W / 2, H / 2).strength(0.1))
       .alphaDecay(0.028)
       .velocityDecay(0.4);
