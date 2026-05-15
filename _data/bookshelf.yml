@@ -3,14 +3,19 @@
 
 - section: currently reading
   books:
-  - title: Notes from Underground
-    author: Fyodor Dostoevsky
-    cover: /images/books/notes-from-underground.jpg
+  - title: The Kitchen God's Wife
+    author: Amy Tan
+    cover: https://m.media-amazon.com/images/I/71cTZNxdwQL._AC_UF1000,1000_QL80_.jpg
   - title: 'The Master: The Long Run and Beautiful Game of Roger Federer'
     author: Christopher Clarey
     cover: /images/books/the-master-federer.jpg
 - section: '2026'
   books:
+  - title: Notes from Underground
+    author: Fyodor Dostoevsky
+    cover: /images/books/notes-from-underground.jpg
+    rating: 3
+    note: hurted my ego that it took half a sem to finish such a tiny book
   - title: '1984'
     author: George Orwell
     note: read the audiobook version as well, loved it, althou hated the ending
@@ -65,7 +70,7 @@
     rating: 3.5
   - title: 'The Prague Golem: Jewish Stories of the Ghetto'
     author: Soňa Marešová
-    note: purchased in prague from a cute bookshop, was amazed to learn so much history from the tiny book
+    note: purchased in prague from a cute bookshop, was amazed to learn so much from this tiny book
     cover: /images/books/prague-golem.jpg
     rating: 3.5
 - section: '2024'
