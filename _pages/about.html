@@ -82,6 +82,35 @@ redirect_from:
   height: 100%;
 }
 
+.visitor-garden {
+  margin-top: 2.5em;
+  padding-top: 1.5em;
+  border-top: 1px solid #d4d3cb;
+}
+.garden-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  color: #bbb;
+  margin-bottom: 0.9em;
+  letter-spacing: 0.04em;
+}
+.garden-trees {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px 2px;
+  align-items: flex-end;
+  min-height: 52px;
+}
+.garden-tree {
+  display: inline-block;
+  opacity: 0;
+  animation: tree-appear 0.5s ease-out forwards;
+}
+@keyframes tree-appear {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 </style>
 
 <div class="particle-hero">
@@ -115,6 +144,78 @@ redirect_from:
   <img src="/images/logos/ntu.png" alt="NTU">
 </div>
 </div>
+
+<div class="visitor-garden">
+  <div class="garden-label" id="garden-label">— loading garden… —</div>
+  <div class="garden-trees" id="garden-trees"></div>
+</div>
+
+<script>
+(function() {
+  var MAX_TREES  = 50;
+  var VISITED_KEY = 'panda_garden_v1';
+  var NS = 'pandaliza-github-io';
+  var KEY = 'garden-v1';
+
+  function lcg(n) {
+    var s = (n * 9973 + 7) >>> 0;
+    return function() {
+      s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+      return s / 0x100000000;
+    };
+  }
+
+  function makeTree(i) {
+    var r = lcg(i);
+    var cH = Math.floor(r() * 22 + 20);
+    var cW = Math.floor(r() * 10 + 13);
+    var tH = Math.floor(r() * 5 + 5);
+    var g  = Math.floor(r() * 45 + 60);
+    var col = 'rgb(22,' + g + ',22)';
+    var W = cW + 8, H = cH + tH + 2;
+    var cx = W / 2;
+    var pts = cx.toFixed(1)+',1 '+(cx-cW/2).toFixed(1)+','+cH+' '+(cx+cW/2).toFixed(1)+','+cH;
+    var tx = (cx - 1.5).toFixed(1);
+    var delay = (i * 0.055).toFixed(2) + 's';
+    return '<span class="garden-tree" style="animation-delay:'+delay+'">'
+      + '<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">'
+      + '<polygon points="'+pts+'" fill="'+col+'"/>'
+      + '<rect x="'+tx+'" y="'+cH+'" width="3" height="'+tH+'" fill="#8a6a44"/>'
+      + '</svg></span>';
+  }
+
+  function render(count) {
+    var label = document.getElementById('garden-label');
+    var trees = document.getElementById('garden-trees');
+    if (!label || !trees) return;
+    var n = Math.min(count, MAX_TREES);
+    var html = '';
+    for (var i = 0; i < n; i++) html += makeTree(i);
+    trees.innerHTML = html;
+    if (count === 0)        label.textContent = '— be the first visitor —';
+    else if (count === 1)   label.textContent = '— 1 visitor planted this tree —';
+    else if (count > MAX_TREES) label.textContent = '— '+count+' visitors have grown this forest —';
+    else                    label.textContent = '— '+count+' visitors, '+count+' trees —';
+  }
+
+  function run() {
+    var visited = localStorage.getItem(VISITED_KEY);
+    var url = 'https://api.countapi.xyz/' + (visited ? 'get' : 'hit') + '/' + NS + '/' + KEY;
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        if (d && typeof d.value === 'number') {
+          if (!visited) localStorage.setItem(VISITED_KEY, '1');
+          render(d.value);
+        } else { render(6); }
+      })
+      .catch(function() { render(6); });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+</script>
 
 <script>
 (function() {

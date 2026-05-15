@@ -121,6 +121,13 @@
       "avatar": "https://tanmay-agarwal.com/assets/img/good_photo_sqaure.jpeg"
     },
     {
+      "id": "aumkar-renavikar",
+      "name": "Aumkar Renavikar",
+      "url": "https://www.aumkar.me/",
+      "bio": "Co-founder & CTO of Parallax. Robotics, brain-computer interfaces, and wearables.",
+      "avatar": "/images/aumkar.jpeg"
+    },
+    {
       "id": "manan-agarwal",
       "name": "Manan Agarwal",
       "url": "https://mananag007.github.io/",
@@ -144,7 +151,9 @@
     { "source": "dhruv-shah",      "target": "vipul-ramtekkar" },
     { "source": "vipul-ramtekkar", "target": "liza" },
     { "source": "richeek-das",    "target": "liza" },
-    { "source": "tanmay-agarwal", "target": "liza" },
+    { "source": "tanmay-agarwal",   "target": "liza" },
+    { "source": "aumkar-renavikar", "target": "liza" },
+    { "source": "aumkar-renavikar", "target": "tanmay-agarwal" },
     { "source": "ziyin-xiong",   "target": "naman-kumar" },
     { "source": "lucky-kant",    "target": "naman-kumar" },
     { "source": "lucky-kant",    "target": "vishal-reddy" },
