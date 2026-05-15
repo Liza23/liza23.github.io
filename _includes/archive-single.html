@@ -12,6 +12,56 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% if post.collection == 'publications' %}
+
+{% assign venue_lower = post.venue_short | downcase | default: post.venue | downcase %}
+{% if venue_lower contains 'cvpr' or venue_lower contains 'iccv' or venue_lower contains 'eccv' or venue_lower contains 'neurips' or venue_lower contains 'icml' %}
+  {% assign badge_class = 'pub-card__badge--blue' %}
+{% elsif venue_lower contains 'iros' or venue_lower contains 'icra' or venue_lower contains 'rss' %}
+  {% assign badge_class = 'pub-card__badge--teal' %}
+{% elsif venue_lower contains 'acl' or venue_lower contains 'emnlp' or venue_lower contains 'naacl' or venue_lower contains 'smm4h' %}
+  {% assign badge_class = 'pub-card__badge--purple' %}
+{% elsif venue_lower contains 'patent' %}
+  {% assign badge_class = 'pub-card__badge--gray' %}
+{% else %}
+  {% assign badge_class = 'pub-card__badge--teal' %}
+{% endif %}
+
+<div class="pub-card">
+  {% if teaser %}
+  <div class="pub-card__image">
+    <img src=
+      {% if teaser contains "://" %}
+        "{{ teaser }}"
+      {% else %}
+        "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+      {% endif %}
+      alt="{{ title }}">
+  </div>
+  {% endif %}
+  <div class="pub-card__content">
+    <span class="pub-card__badge {{ badge_class }}">{{ post.venue_short | default: post.venue }}</span>
+    <h2 class="pub-card__title">{{ title }}</h2>
+    {% if post.authors %}
+    <p class="pub-card__authors">{{ post.authors }}</p>
+    {% endif %}
+    {% if post.venue %}
+    <p class="pub-card__venue"><em>{{ post.venue }}</em></p>
+    {% endif %}
+    {% if post.excerpt %}
+    <p class="pub-card__excerpt">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+    {% endif %}
+    <div class="pub-card__links">
+      {% if post.paperurl %}<a href="{{ post.paperurl }}" class="pub-card__link">Paper</a>{% endif %}
+      {% if post.projecturl %}<a href="{{ post.projecturl }}" class="pub-card__link">Project</a>{% endif %}
+      {% if post.codeurl %}<a href="{{ post.codeurl }}" class="pub-card__link">Code</a>{% endif %}
+      {% if post.slidesurl %}<a href="{{ post.slidesurl }}" class="pub-card__link">Slides</a>{% endif %}
+    </div>
+  </div>
+</div>
+
+{% else %}
+
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
@@ -34,7 +84,7 @@
           {% assign is_undergrad_teaching = true %}
         {% endif %}
       {% endif %}
-      {% if is_undergrad_teaching or post.collection == 'publications' %}
+      {% if is_undergrad_teaching %}
         {{ title }}
       {% elsif post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
@@ -42,41 +92,29 @@
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
-        {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.collection == 'publications' %}
-          {% if post.authors %}
-            <p>{{ post.authors }}</p>
-          {% endif %}
-          <p>
-            <i>{{ post.venue_short | default: post.venue }}</i>
-            {% if post.paperurl %}
-              / <a href="{{ post.paperurl }}">{{ post.link_label | default: "Paper" }}</a>
-            {% else %}
-              / {{ post.link_label | default: "Paper" }}
-            {% endif %}
-          </p>
-        {% elsif post.collection == 'books' %}
-          <p>
-            {% if post.author %}By <i>{{ post.author }}</i>{% endif %}
-            {% if post.author and post.rating %} | {% endif %}
-            {% if post.rating %}Rating: {{ post.rating }}{% endif %}
-          </p>
-        {% elsif post.date %}
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
+    {% if post.collection == 'teaching' %}
+      <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+    {% elsif post.collection == 'books' %}
+      <p>
+        {% if post.author %}By <i>{{ post.author }}</i>{% endif %}
+        {% if post.author and post.rating %} | {% endif %}
+        {% if post.rating %}Rating: {{ post.rating }}{% endif %}
+      </p>
+    {% elsif post.date %}
+      <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+    {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
-    
+
     {% if post.citation and post.paperurl and post.slidesurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.citation and post.paperurl %}
@@ -93,3 +131,5 @@
 
   </article>
 </div>
+
+{% endif %}

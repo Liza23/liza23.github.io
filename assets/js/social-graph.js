@@ -13,8 +13,8 @@
   var LINK_HL      = '#111110';
 
   var isMobile = window.innerWidth < 600;
-  var W = isMobile ? 600 : 1300;
-  var H = isMobile ? 450 : 860;
+  var W = isMobile ? 400 : 867;
+  var H = isMobile ? 300 : 573;
   var oR = isMobile ? 18 : OWNER_R;
   var nR = isMobile ? 11 : NODE_R;
 
@@ -104,7 +104,7 @@
         .radius(function (d) { return (d.isOwner ? oR : nR) + 10; }))
       .force('radial', d3.forceRadial(function (d) {
         if (d.isOwner) return 0;
-        return d._degree === 1 ? 200 : 360;
+        return d._degree === 1 ? 133 : 240;
       }, W / 2, H / 2).strength(0.1))
       .alphaDecay(0.028)
       .velocityDecay(0.4);
