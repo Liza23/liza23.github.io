@@ -30,6 +30,20 @@
       "avatar": "https://kartiksharma907.github.io/images/bio-img.jpg"
     },
     {
+      "id": "ananya-bal",
+      "name": "Ananya Bal",
+      "url": "https://ananyabal.github.io/",
+      "bio": "PhD Robotics @ CMU. Dexterous manipulation, hand-object interaction, and world models.",
+      "avatar": "https://ananyabal.com/images/ananya_nyc.jpeg"
+    },
+    {
+      "id": "bhavya-agrawalla",
+      "name": "Bhavya Agrawalla",
+      "url": "https://agrawallabhavya.github.io/",
+      "bio": "PhD CS @ CMU. Deep RL and statistics. Math + CS undergrad from MIT.",
+      "avatar": "https://agrawallabhavya.github.io/new_images/prof_pic_circle.jpg"
+    },
+    {
       "id": "ziyin-xiong",
       "name": "Ziyin Xiong",
       "url": "https://ziyin-xiong.github.io/",
@@ -41,7 +55,7 @@
       "name": "Sarvesh Patil",
       "url": "https://servo97.github.io/",
       "bio": "PhD Robotics @ CMU. RL, variational inference, and representation learning for dexterous manipulation.",
-      "avatar": "https://sarveshpatil.dev/assets/img/prof_pic.jpg"
+      "avatar": "https://servo97.github.io/assets/img/prof_pic-1400.webp"
     },
     {
       "id": "kshitiz",
@@ -49,6 +63,34 @@
       "url": "https://kshitiz-1225.github.io/",
       "bio": "MSR @ CMU. VLMs, reinforcement learning, and weakly supervised robotics.",
       "avatar": "https://kshitiz-1225.github.io/misc/kshitiz.png"
+    },
+    {
+      "id": "lucky-kant",
+      "name": "Lucky Kant Nayak",
+      "url": "https://www.ri.cmu.edu/ri-people/lucky-kant-nayak/",
+      "bio": "MSR @ CMU Robotics Institute. Reinforcement learning and robotics. IIT Kanpur undergrad.",
+      "avatar": "https://avatars.githubusercontent.com/u/146480157?s=200&v=4"
+    },
+    {
+      "id": "sreyas",
+      "name": "Sreyas Venkataraman",
+      "url": "https://vsreyas.github.io/",
+      "bio": "MSR @ CMU. Robot learning, RL, and diffusion models for robot control.",
+      "avatar": "https://riss.ri.cmu.edu/wp-content/uploads/2024/uploads/2024-RISS-VENKATARAMAN-Sreyas-Headshot-1-225x300.jpg"
+    },
+    {
+      "id": "soumojit",
+      "name": "Soumojit Bhattacharya",
+      "url": "https://www.ri.cmu.edu/ri-people/soumojit-bhattacharya/",
+      "bio": "MSR @ CMU. Robot manipulation, tactile sensing, and diffusion-based policy learning.",
+      "avatar": ""
+    },
+    {
+      "id": "manan-agarwal",
+      "name": "Manan Agarwal",
+      "url": "https://mananag007.github.io/",
+      "bio": "MS ML @ CMU. Flow- and diffusion-based generative models for language and control.",
+      "avatar": "https://mananag007.github.io/assets/profile_pic.jpg"
     }
   ],
   "links": [
@@ -58,12 +100,20 @@
     { "source": "kshitiz",       "target": "liza" },
     { "source": "sarvesh-patil", "target": "liza" },
     { "source": "ziyin-xiong",   "target": "liza" },
+    { "source": "sreyas",        "target": "liza" },
+    { "source": "manan-agarwal", "target": "liza" },
     { "source": "ziyin-xiong",   "target": "naman-kumar" },
+    { "source": "lucky-kant",    "target": "naman-kumar" },
+    { "source": "lucky-kant",    "target": "vishal-reddy" },
     { "source": "naman-kumar",   "target": "vishal-reddy" },
     { "source": "naman-kumar",   "target": "kartik-sharma" },
     { "source": "naman-kumar",   "target": "kshitiz" },
     { "source": "vishal-reddy",  "target": "kartik-sharma" },
     { "source": "vishal-reddy",  "target": "kshitiz" },
-    { "source": "kartik-sharma", "target": "kshitiz" }
+    { "source": "kartik-sharma", "target": "kshitiz" },
+    { "source": "bhavya-agrawalla", "target": "kshitiz" },
+    { "source": "ananya-bal",    "target": "kartik-sharma" },
+    { "source": "soumojit",      "target": "sreyas" },
+    { "source": "manan-agarwal", "target": "sreyas" }
   ]
 }
