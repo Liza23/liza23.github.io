@@ -17,7 +17,7 @@
     },
     {
       "id": "vishal-reddy",
-      "name": "Vishal Reddy Mandadi",
+      "name": "Vishal Mandadi",
       "url": "https://vishal-2000.github.io/",
       "bio": "MS Robotics @ CMU. Robot learning and physics engines with Prof. Deepak Pathak.",
       "avatar": "https://vishal-2000.github.io/images/profile.jpg"
@@ -79,6 +79,20 @@
       "avatar": "/images/sreyas.jpeg"
     },
     {
+      "id": "pranav-deo",
+      "name": "Pranav Deo",
+      "url": "https://pranav-deo.github.io/",
+      "bio": "Robotics Research Engineer.",
+      "avatar": "https://pranav-deo.github.io/images/DP.jpg"
+    },
+    {
+      "id": "pranav-thakkar",
+      "name": "Pranav Thakkar",
+      "url": "https://pranavnnt.github.io/",
+      "bio": "PhD @ Cornell. Robot-assisted dressing through haptic perception and deformable object manipulation.",
+      "avatar": "https://pranavnnt.github.io/files/Pranav_dp-modified.png"
+    },
+    {
       "id": "dhruv-shah",
       "name": "Dhruv Shah",
       "url": "https://robodhruv.github.io/",
@@ -123,6 +137,9 @@
     { "source": "ziyin-xiong",   "target": "liza" },
     { "source": "sreyas",        "target": "liza" },
     { "source": "manan-agarwal",  "target": "liza" },
+    { "source": "pranav-deo",      "target": "liza" },
+    { "source": "pranav-deo",      "target": "vipul-ramtekkar" },
+    { "source": "pranav-thakkar",  "target": "vipul-ramtekkar" },
     { "source": "dhruv-shah",      "target": "vipul-ramtekkar" },
     { "source": "vipul-ramtekkar", "target": "liza" },
     { "source": "richeek-das",    "target": "liza" },
