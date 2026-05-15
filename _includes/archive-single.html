@@ -70,6 +70,9 @@
           {% assign is_undergrad_teaching = true %}
         {% endif %}
       {% endif %}
+      {% if post.collection == 'teaching' and post.logo %}
+        <img src="{{ post.logo }}" alt="{{ post.venue }}" style="height: 1.2em; vertical-align: middle; margin-right: 0.4em;">
+      {% endif %}
       {% if is_undergrad_teaching %}
         {{ title }}
       {% elsif post.link %}
@@ -84,10 +87,7 @@
     {% endif %}
 
     {% if post.collection == 'teaching' %}
-      <p>
-        {% if post.logo %}<img src="{{ post.logo }}" alt="{{ post.venue }}" style="height: 1.4em; vertical-align: middle; margin-right: 0.4em;">{% endif %}
-        {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}
-      </p>
+      <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% elsif post.collection == 'books' %}
       <p>
         {% if post.author %}By <i>{{ post.author }}</i>{% endif %}

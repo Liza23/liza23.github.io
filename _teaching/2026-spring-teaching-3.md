@@ -1,7 +1,7 @@
 ---
 title: "16-385: Computer Vision (Spring 2026)"
 collection: teaching
-type: Undergraduate course"
+type: Graduate
 permalink: /teaching/2026-spring-teaching-3
 venue: "Carnegie Mellon University"
 date: 2026-01-01
