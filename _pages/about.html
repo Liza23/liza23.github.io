@@ -153,9 +153,9 @@ redirect_from:
 <script>
 (function() {
   var MAX_TREES  = 200;
-  var VISITED_KEY = 'panda_garden_v1';
+  var VISITED_KEY = 'panda_garden_v2';
   var NS = 'pandaliza-github-io';
-  var KEY = 'garden-v1';
+  var KEY = 'garden-v2';
 
   function lcg(n) {
     var s = (n * 9973 + 7) >>> 0;
@@ -186,7 +186,12 @@ redirect_from:
       + '</svg></span>';
   }
 
-  function render(count) {
+  function ordinal(n) {
+    var s = ['th','st','nd','rd'], v = n % 100;
+    return n + (s[(v-20)%10] || s[v] || s[0]);
+  }
+
+  function render(count, isNew) {
     var label = document.getElementById('garden-label');
     var trees = document.getElementById('garden-trees');
     if (!label || !trees) return;
@@ -194,24 +199,27 @@ redirect_from:
     var html = '';
     for (var i = 0; i < n; i++) html += makeTree(i);
     trees.innerHTML = html;
-    if (count === 0)        label.textContent = '— be the first visitor —';
-    else if (count === 1)   label.textContent = '— 1 visitor planted this tree —';
-    else if (count > MAX_TREES) label.textContent = '— '+count+' visitors have grown this forest —';
-    else                    label.textContent = '— '+count+' visitors, '+count+' trees —';
+    if (isNew) {
+      label.textContent = 'hi! thanks for planting a tree in my forest — you\'re the ' + ordinal(count) + ' visitor :)';
+    } else {
+      label.textContent = 'this forest has ' + count + ' trees — come back anytime';
+    }
   }
 
   function run() {
     var visited = localStorage.getItem(VISITED_KEY);
-    var url = 'https://api.countapi.xyz/' + (visited ? 'get' : 'hit') + '/' + NS + '/' + KEY;
+    var base = 'https://api.counterapi.dev/v1/' + NS + '/' + KEY;
+    var url = visited ? base + '/' : base + '/up';
     fetch(url)
       .then(function(r) { return r.json(); })
       .then(function(d) {
-        if (d && typeof d.value === 'number') {
-          if (!visited) localStorage.setItem(VISITED_KEY, '1');
-          render(d.value);
-        } else { render(6); }
+        if (d && typeof d.count === 'number') {
+          var isNew = !visited;
+          if (isNew) localStorage.setItem(VISITED_KEY, '1');
+          render(d.count, isNew);
+        } else { render(6, false); }
       })
-      .catch(function() { render(6); });
+      .catch(function() { render(6, false); });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
