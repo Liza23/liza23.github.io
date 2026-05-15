@@ -152,7 +152,7 @@ redirect_from:
 
 <script>
 (function() {
-  var MAX_TREES  = 50;
+  var MAX_TREES  = 200;
   var VISITED_KEY = 'panda_garden_v1';
   var NS = 'pandaliza-github-io';
   var KEY = 'garden-v1';
@@ -170,8 +170,10 @@ redirect_from:
     var cH = Math.floor(r() * 22 + 20);
     var cW = Math.floor(r() * 10 + 13);
     var tH = Math.floor(r() * 5 + 5);
-    var g  = Math.floor(r() * 45 + 60);
-    var col = 'rgb(22,' + g + ',22)';
+    var b  = Math.floor(r() * 55 + 55);
+    var col = 'rgb('+b+','+b+','+(b-3)+')';
+    var trunkL = Math.floor(r() * 15 + 65);
+    var trunkCol = 'rgb('+trunkL+','+trunkL+','+trunkL+')';
     var W = cW + 8, H = cH + tH + 2;
     var cx = W / 2;
     var pts = cx.toFixed(1)+',1 '+(cx-cW/2).toFixed(1)+','+cH+' '+(cx+cW/2).toFixed(1)+','+cH;
@@ -180,7 +182,7 @@ redirect_from:
     return '<span class="garden-tree" style="animation-delay:'+delay+'">'
       + '<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">'
       + '<polygon points="'+pts+'" fill="'+col+'"/>'
-      + '<rect x="'+tx+'" y="'+cH+'" width="3" height="'+tH+'" fill="#8a6a44"/>'
+      + '<rect x="'+tx+'" y="'+cH+'" width="3" height="'+tH+'" fill="'+trunkCol+'"/>'
       + '</svg></span>';
   }
 
