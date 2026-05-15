@@ -79,6 +79,13 @@
       "avatar": "https://riss.ri.cmu.edu/wp-content/uploads/2024/uploads/2024-RISS-VENKATARAMAN-Sreyas-Headshot-1-225x300.jpg"
     },
     {
+      "id": "tanmay-agarwal",
+      "name": "Tanmay Agarwal",
+      "url": "https://tanmay-agarwal.com",
+      "bio": "Masters @ Stanford. Multisensory robotics and embodied AI with Fei-Fei Li and Jiajun Wu.",
+      "avatar": "https://tanmay-agarwal.com/assets/img/good_photo_sqaure.jpeg"
+    },
+    {
       "id": "manan-agarwal",
       "name": "Manan Agarwal",
       "url": "https://mananag007.github.io/",
@@ -94,7 +101,8 @@
     { "source": "sarvesh-patil", "target": "liza" },
     { "source": "ziyin-xiong",   "target": "liza" },
     { "source": "sreyas",        "target": "liza" },
-    { "source": "manan-agarwal", "target": "liza" },
+    { "source": "manan-agarwal",  "target": "liza" },
+    { "source": "tanmay-agarwal", "target": "liza" },
     { "source": "ziyin-xiong",   "target": "naman-kumar" },
     { "source": "lucky-kant",    "target": "naman-kumar" },
     { "source": "lucky-kant",    "target": "vishal-reddy" },
