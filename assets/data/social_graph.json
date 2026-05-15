@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "id": "liza",
+      "name": "Liza Dahiya",
+      "url": "https://pandaliza.github.io",
+      "bio": "Researcher @ CMU / Honda R&D. Robots, maps, and chai.",
+      "avatar": "https://pandaliza.github.io/images/profile.jpg",
+      "isOwner": true
+    },
+    {
+      "id": "naman-kumar",
+      "name": "Naman Kumar",
+      "url": "https://namanxkumar.github.io/",
+      "bio": "MS Robotics @ CMU. Embodied reasoning, memory, and crowd navigation.",
+      "avatar": ""
+    },
+    {
+      "id": "vishal-reddy",
+      "name": "Vishal Reddy Mandadi",
+      "url": "https://vishal-2000.github.io/",
+      "bio": "MS Robotics @ CMU. Robot learning and physics engines with Prof. Deepak Pathak.",
+      "avatar": "https://vishal-2000.github.io/images/profile.jpg"
+    },
+    {
+      "id": "kartik-sharma",
+      "name": "Kartik Sharma",
+      "url": "https://kartiksharma907.github.io/",
+      "bio": "MSR @ CMU. 3D/4D reconstruction from video and hand-object interaction.",
+      "avatar": "https://kartiksh.github.io/images/bio-img.jpg"
+    },
+    {
+      "id": "kshitiz",
+      "name": "Kshitiz",
+      "url": "https://kshitiz-1225.github.io/",
+      "bio": "MSR @ CMU. VLMs, reinforcement learning, and weakly supervised robotics.",
+      "avatar": "https://kshitiz-1225.github.io/misc/kshitiz.png"
+    }
+  ],
+  "links": [
+    { "source": "naman-kumar",   "target": "liza" },
+    { "source": "vishal-reddy",  "target": "liza" },
+    { "source": "kartik-sharma", "target": "liza" },
+    { "source": "kshitiz",       "target": "liza" }
+  ]
+}

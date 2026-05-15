@@ -728,3 +728,53 @@ hr {
   }
 }
 
+/* ─── Social Graph / Network page ─────────────────────────────────────────── */
+
+.sg-field {
+  margin-bottom: .9em;
+
+  label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: .75rem;
+    font-weight: 500;
+    color: #6b6b68;
+    letter-spacing: .02em;
+    margin-bottom: .3em;
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="url"],
+  select {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: .82rem;
+    border: 1px solid #d4d3cb;
+    border-radius: 0;
+    background: #ffffff;
+    color: #111110;
+    padding: .45em .75em;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: none;
+    transition: border-color .15s ease;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 0;
+
+    &:focus {
+      border-color: #111110;
+      outline: none;
+      box-shadow: none;
+    }
+
+    &.sg-error-field { border-color: #e55; }
+  }
+}
+
+@media (max-width: 600px) {
+  .sg-field input[type="text"],
+  .sg-field input[type="url"],
+  .sg-field select,
+  #sg-output { max-width: 100%; }
+}
+
