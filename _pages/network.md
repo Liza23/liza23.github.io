@@ -91,7 +91,7 @@ hr.sg-divider{border:none;border-top:1px solid #d4d3cb;margin:2em 0}
 
 <p class="sg-intro">
   know someone already on this graph? add yourself as a node.
-  fill in the form below — it'll open a pre-filled github issue for me to review.
+  fill in the form below, it'll open a pre-filled github issue for me to review.
   once merged, you'll appear here.
 </p>
 

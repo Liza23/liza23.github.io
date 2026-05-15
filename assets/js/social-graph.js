@@ -14,7 +14,7 @@
 
   var isMobile = window.innerWidth < 600;
   var W = isMobile ? 600 : 1300;
-  var H = isMobile ? 450 : 720;
+  var H = isMobile ? 675 : 1080;
   var oR = isMobile ? 18 : OWNER_R;
   var nR = isMobile ? 11 : NODE_R;
 
