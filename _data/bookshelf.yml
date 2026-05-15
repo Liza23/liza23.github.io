@@ -3,12 +3,12 @@
 
 - section: currently reading
   books:
-  - title: The Kitchen God's Wife
-    author: Amy Tan
-    cover: https://m.media-amazon.com/images/I/71cTZNxdwQL._AC_UF1000,1000_QL80_.jpg
   - title: 'The Master: The Long Run and Beautiful Game of Roger Federer'
     author: Christopher Clarey
     cover: /images/books/the-master-federer.jpg
+  - title: The Kitchen God's Wife
+    author: Amy Tan
+    cover: https://m.media-amazon.com/images/I/71cTZNxdwQL._AC_UF1000,1000_QL80_.jpg
 - section: '2026'
   books:
   - title: Notes from Underground
