@@ -9,5 +9,7 @@ venue: 'IEEE/RSJ International Conference on Intelligent Robots and Systems (IRO
 venue_short: "IROS 2025"
 domain: "robotics"
 cited_by: 1
+header:
+  teaser: "publications/iros.png"
 citation: 'Buchner, M., Dahiya, L., Dorer, S., Ramtekkar, V., Nishimiya, K., Cattaneo, D., et al. (2025). Visual Loop Closure Detection Through Deep Graph Consensus. In <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>.'
 ---

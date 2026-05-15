@@ -6,6 +6,8 @@ excerpt: 'This paper presents our work for the Task 5 of the Social Media Mining
 date: 2024-08-01
 authors: "L Dahiya, R Bagga"
 domain: "health-nlp"
+header:
+  teaser: "publications/workshop-acl.png"
 cited_by: 0
 venue: 'Proceedings of The 9th Social Media Mining for Health Research and Applications (SMM4H 2024) Workshop and Shared Tasks'
 venue_short: "SMM4H 2024"

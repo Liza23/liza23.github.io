@@ -9,6 +9,8 @@ venue: 'ICRA 2024 Workshop on Resilient Off-road Autonomy'
 venue_short: "ICRA Workshop 2024"
 domain: "robotics"
 cited_by: 0
+header:
+  teaser: "publications/icra.png"
 paperurl: 'https://openreview.net/forum?id=qzVdN0ZRt9'
 citation: 'Ramtekkar, V. V., Dahiya, L., Shah, N., Nishimiya, K., Kuroki, T., Song, C., ... & Jeon, M. H. Robust Depth-Aided Segmentation for Drivable Region Detection in Challenging Environments. In ICRA 2024 Workshop on Resilient Off-road Autonomy.'
 ---
