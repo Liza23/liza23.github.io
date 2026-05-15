@@ -30,6 +30,13 @@
       "avatar": "https://kartiksharma907.github.io/images/bio-img.jpg"
     },
     {
+      "id": "sarvesh-patil",
+      "name": "Sarvesh Patil",
+      "url": "https://servo97.github.io/",
+      "bio": "PhD Robotics @ CMU. RL, variational inference, and representation learning for dexterous manipulation.",
+      "avatar": "https://sarveshpatil.dev/assets/img/prof_pic.jpg"
+    },
+    {
       "id": "kshitiz",
       "name": "Kshitiz",
       "url": "https://kshitiz-1225.github.io/",
@@ -42,6 +49,7 @@
     { "source": "vishal-reddy",  "target": "liza" },
     { "source": "kartik-sharma", "target": "liza" },
     { "source": "kshitiz",       "target": "liza" },
+    { "source": "sarvesh-patil", "target": "liza" },
     { "source": "naman-kumar",   "target": "vishal-reddy" },
     { "source": "naman-kumar",   "target": "kartik-sharma" },
     { "source": "naman-kumar",   "target": "kshitiz" },
