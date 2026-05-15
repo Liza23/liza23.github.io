@@ -30,6 +30,13 @@
       "avatar": "https://kartiksharma907.github.io/images/bio-img.jpg"
     },
     {
+      "id": "ziyin-xiong",
+      "name": "Ziyin Xiong",
+      "url": "https://ziyin-xiong.github.io/",
+      "bio": "MSR @ CMU Robotics Institute. Generalizable robot skill learning and vision.",
+      "avatar": "https://ziyin-xiong.github.io/images/zyxiong.jpg"
+    },
+    {
       "id": "sarvesh-patil",
       "name": "Sarvesh Patil",
       "url": "https://servo97.github.io/",
@@ -50,6 +57,8 @@
     { "source": "kartik-sharma", "target": "liza" },
     { "source": "kshitiz",       "target": "liza" },
     { "source": "sarvesh-patil", "target": "liza" },
+    { "source": "ziyin-xiong",   "target": "liza" },
+    { "source": "ziyin-xiong",   "target": "naman-kumar" },
     { "source": "naman-kumar",   "target": "vishal-reddy" },
     { "source": "naman-kumar",   "target": "kartik-sharma" },
     { "source": "naman-kumar",   "target": "kshitiz" },
