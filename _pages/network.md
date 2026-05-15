@@ -56,9 +56,8 @@ hr.sg-divider{border:none;border-top:1px solid #d4d3cb;margin:2em 0}
 </style>
 
 <p class="network-intro">
-  a living map of people i know and the people they know —
-  a small corner of the web, connected by curiosity.
-  nodes link to personal sites. drag to rearrange. hover to peek.
+  a small corner of the world of people i know and who they know connected by curiosity!
+  feel free to drag rearrange, hover to peak or click to visit their world
 </p>
 
 <div id="graph-container">
