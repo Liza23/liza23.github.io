@@ -19,6 +19,7 @@
     <span class="pub-card__badge">{{ post.venue_short | default: post.venue }}</span>
     {% if post.domain %}<span class="pub-card__domain">{{ post.domain }}</span>{% endif %}
   </div>
+  <h2 class="pub-card__title">{{ title }}</h2>
   <div class="pub-card__body">
     {% if teaser %}
     <div class="pub-card__image">
@@ -32,7 +33,6 @@
     </div>
     {% endif %}
     <div class="pub-card__content">
-      <h2 class="pub-card__title">{{ title }}</h2>
       {% if post.authors %}
       <p class="pub-card__authors">{{ post.authors }}</p>
       {% endif %}

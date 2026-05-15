@@ -79,6 +79,20 @@
       "avatar": "/images/sreyas.jpeg"
     },
     {
+      "id": "dhruv-shah",
+      "name": "Dhruv Shah",
+      "url": "https://robodhruv.github.io/",
+      "bio": "Asst. Professor @ Princeton Robotics & Research Scientist @ Google DeepMind. Autonomous robots through ML.",
+      "avatar": "https://prism.robo.princeton.edu/assets/DhruvShah25.jpg"
+    },
+    {
+      "id": "vipul-ramtekkar",
+      "name": "Vipul Ramtekkar",
+      "url": "https://vipulramtekkar.github.io/about/",
+      "bio": "Computer Vision Engineer @ Honda R&D Japan. Autonomous systems and robotics.",
+      "avatar": "https://vipulramtekkar.github.io/assets/vipul_main2.jpg"
+    },
+    {
       "id": "richeek-das",
       "name": "Richeek Das",
       "url": "https://www.seas.upenn.edu/~richeek/",
@@ -109,6 +123,8 @@
     { "source": "ziyin-xiong",   "target": "liza" },
     { "source": "sreyas",        "target": "liza" },
     { "source": "manan-agarwal",  "target": "liza" },
+    { "source": "dhruv-shah",      "target": "vipul-ramtekkar" },
+    { "source": "vipul-ramtekkar", "target": "liza" },
     { "source": "richeek-das",    "target": "liza" },
     { "source": "tanmay-agarwal", "target": "liza" },
     { "source": "ziyin-xiong",   "target": "naman-kumar" },
@@ -122,7 +138,9 @@
     { "source": "kartik-sharma", "target": "kshitiz" },
     { "source": "bhavya-agrawalla", "target": "kshitiz" },
     { "source": "ananya-bal",    "target": "kartik-sharma" },
-    { "source": "manan-agarwal", "target": "sreyas" },
+    { "source": "manan-agarwal",  "target": "sreyas" },
+    { "source": "sarvesh-patil", "target": "manan-agarwal" },
+    { "source": "sarvesh-patil", "target": "sreyas" },
     { "source": "manan-agarwal", "target": "richeek-das" }
   ]
 }
