@@ -7,6 +7,7 @@ date: 2024-09-01
 authors: "R Manro, R Mao, L Dahiya, Y Ma, E Cambria"
 venue: 'Proceedings of 5th International Conference on Financial Technology'
 venue_short: "ICFT 2024"
+domain: "computational-social-science"
 cited_by: 7
 paperurl: 'https://ww.sentic.net/cognitive-analysis-of-ceo-speeches-and-their-effects-on-stock-markets.pdf'
 citation: 'Manro, R., Mao, R., Dahiya, L., Ma, Y., & Cambria, E. (2024). A cognitive analysis of CEO speeches and their effects on stock markets. In Proceedings of the 5th International Conference on Financial Technology, ICFT, Singapore.'

@@ -9,4 +9,7 @@ venue: 'CVPR 2026'
 venue_short: "CVPR 2026"
 paperurl: "https://openreview.net/pdf?id=DJqPCQqcdN"
 citation: 'Choudhury, R., Dandurand, J.S., Qiu, K., Bhat, K.M., Sharma, K., Dahiya, L., Zhao, Y., Kundu, S., Lin, C.H., Kitani, K., & Jeni, L.A. (2025). FPSBench: A Benchmark for Video Understanding at High Frame Rates. In <i>CVPR 2026</i>.'
+domain: "multimodal-reasoning"
+header:
+  teaser: "fpsbench_teaser.png"
 ---

@@ -5,6 +5,7 @@ category: workshops
 excerpt: 'This paper presents our work for the Task 5 of the Social Media Mining for Health Applications 2024 Shared Task-Binary classification of English tweets reporting children’s medical disorders. In this paper, we present and compare multiple approaches for automatically classifying tweets from parents based on whether they mention having a child with attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorders (ASD), delayed speech, or asthma. We use ensemble of various BERT-based models trained on provided dataset that yields an F1 score of 0.901 on the test data.'
 date: 2024-08-01
 authors: "L Dahiya, R Bagga"
+domain: "health-nlp"
 cited_by: 0
 venue: 'Proceedings of The 9th Social Media Mining for Health Research and Applications (SMM4H 2024) Workshop and Shared Tasks'
 venue_short: "SMM4H 2024"

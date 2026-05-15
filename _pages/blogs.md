@@ -127,7 +127,7 @@ author_profile: true
 </style>
 
 <div class="section-intro">
-  <p>Welcome to my blog! I write about AI, research, life in Tokyo, and everything in between. Check out my latest posts below or visit my <a href="https://medium.com/@lizadahiya01" target="_blank" class="medium-badge">Medium Profile →</a></p>
+  <p>welcome to this corner of my world where I write stories that inspire me or have touched my heart in some way, some blogs here are from my time in tokyo and other from other travels. please follow me on <a href="https://medium.com/@lizadahiya01" target="_blank" class="medium-badge">Medium!</a> if you'd like</p>
 </div>
 
 <div class="blog-grid">

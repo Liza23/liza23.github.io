@@ -7,6 +7,7 @@ date: 2026-01-01
 authors: "L Dahiya, R Bagga"
 venue: 'Journal of Computational Social Science 9 (1), 1'
 venue_short: "Journal of Computational Social Science 2026"
+domain: "health-nlp"
 paperurl: ''
 cited_by: 1
 citation: 'Dahiya, L., & Bagga, R. (2026). Digital epidemiology: Leveraging social media for insight into epilepsy and mental health. <i>Journal of Computational Social Science</i>, 9(1), 1.'

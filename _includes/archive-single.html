@@ -14,19 +14,6 @@
 
 {% if post.collection == 'publications' %}
 
-{% assign venue_lower = post.venue_short | downcase | default: post.venue | downcase %}
-{% if venue_lower contains 'cvpr' or venue_lower contains 'iccv' or venue_lower contains 'eccv' or venue_lower contains 'neurips' or venue_lower contains 'icml' %}
-  {% assign badge_class = 'pub-card__badge--blue' %}
-{% elsif venue_lower contains 'iros' or venue_lower contains 'icra' or venue_lower contains 'rss' %}
-  {% assign badge_class = 'pub-card__badge--teal' %}
-{% elsif venue_lower contains 'acl' or venue_lower contains 'emnlp' or venue_lower contains 'naacl' or venue_lower contains 'smm4h' %}
-  {% assign badge_class = 'pub-card__badge--purple' %}
-{% elsif venue_lower contains 'patent' %}
-  {% assign badge_class = 'pub-card__badge--gray' %}
-{% else %}
-  {% assign badge_class = 'pub-card__badge--teal' %}
-{% endif %}
-
 <div class="pub-card">
   {% if teaser %}
   <div class="pub-card__image">
@@ -40,7 +27,10 @@
   </div>
   {% endif %}
   <div class="pub-card__content">
-    <span class="pub-card__badge {{ badge_class }}">{{ post.venue_short | default: post.venue }}</span>
+    <div class="pub-card__tags">
+      <span class="pub-card__badge">{{ post.venue_short | default: post.venue }}</span>
+      {% if post.domain %}<span class="pub-card__domain">{{ post.domain }}</span>{% endif %}
+    </div>
     <h2 class="pub-card__title">{{ title }}</h2>
     {% if post.authors %}
     <p class="pub-card__authors">{{ post.authors }}</p>
