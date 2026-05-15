@@ -7,4 +7,5 @@ venue: "Carnegie Mellon University"
 date: 2026-01-01
 location: "Pittsburgh, USA"
 link: "https://16385.courses.cs.cmu.edu/spring2026/courseinfo"
+logo: "/images/logos/cmu.png"
 ---

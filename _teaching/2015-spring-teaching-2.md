@@ -6,4 +6,5 @@ type: Undergraduate course"
 venue: "Indian Institute of Technology, Bombay"
 date: 2021-01-01
 location: "Mumbai, India"
+logo: "/images/logos/iitb.png"
 ---
