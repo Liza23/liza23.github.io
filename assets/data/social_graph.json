@@ -13,7 +13,7 @@
       "name": "Naman Kumar",
       "url": "https://namanxkumar.github.io/",
       "bio": "MS Robotics @ CMU. Embodied reasoning, memory, and crowd navigation.",
-      "avatar": ""
+      "avatar": "/images/naman.jpg"
     },
     {
       "id": "vishal-reddy",
@@ -76,7 +76,7 @@
       "name": "Sreyas Venkataraman",
       "url": "https://www.linkedin.com/in/sreyas-venkataraman-4241b9216",
       "bio": "MSR @ CMU. Robot learning, RL, and diffusion models for robot control.",
-      "avatar": "https://riss.ri.cmu.edu/wp-content/uploads/2024/uploads/2024-RISS-VENKATARAMAN-Sreyas-Headshot-1-225x300.jpg"
+      "avatar": "/images/sreyas.jpeg"
     },
     {
       "id": "richeek-das",
