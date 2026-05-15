@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Network"
+title: "social butterfly!"
 permalink: /network/
 author_profile: true
 ---
@@ -56,8 +56,8 @@ hr.sg-divider{border:none;border-top:1px solid #d4d3cb;margin:2em 0}
 </style>
 
 <p class="network-intro">
-  a small corner of the world of people i know and who they know connected by curiosity!
-  feel free to drag rearrange, hover to peak or click to visit their world
+  a small network of people i know and people who they know, all connected by curiosity!
+  feel free to drag rearrange, hover to peak or click to visit their world :))
 </p>
 
 <div id="graph-container">
