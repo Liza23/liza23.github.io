@@ -6,11 +6,32 @@
   - title: 'The Master: The Long Run and Beautiful Game of Roger Federer'
     author: Christopher Clarey
     cover: /images/books/the-master-federer.jpg
-  - title: The Kitchen God's Wife
-    author: Amy Tan
-    cover: https://m.media-amazon.com/images/I/71cTZNxdwQL._AC_UF1000,1000_QL80_.jpg
+  - title: 'Oh William!'
+    author: Elizabeth Strout
+    cover: /images/books/9780812989434.jpg
 - section: '2026'
   books:
+  - title: The Kitchen God's Wife
+    author: Amy Tan
+    cover: /images/books/kitchen-gods-wife.jpg
+  - title: Trust
+    author: Hernan Diaz
+    cover: /images/books/9780593420317.jpg
+  - title: Normal People
+    author: Sally Rooney
+    cover: /images/books/9781984822178.jpg
+  - title: The Safekeep
+    author: Yael van der Wouden
+    cover: /images/books/9781668034347.jpg
+  - title: Sula
+    author: Toni Morrison
+    cover: /images/books/9781400033430.jpg
+  - title: The Vegetarian
+    author: Han Kang
+    cover: /images/books/9781101906118.jpg
+  - title: Convenience Store Woman
+    author: Sayaka Murata
+    cover: /images/books/9781846276842.jpg
   - title: Notes from Underground
     author: Fyodor Dostoevsky
     cover: /images/books/notes-from-underground.jpg
